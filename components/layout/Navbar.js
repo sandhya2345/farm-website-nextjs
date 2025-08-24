@@ -13,7 +13,7 @@ const Navbar = () => {
             </div>
 
             <div className='flex flex-col leading-tight'>
-                <span className='text-red-700 font-bold text-2xl'>Ambertale</span>
+                <span className='text-red-700 font-bold text-2xl'>Appletale</span>
                 <span className='text-green-600 font-medium text-sm'>FARMS</span>
             </div>
         </div>
