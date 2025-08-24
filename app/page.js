@@ -46,21 +46,117 @@ export default function Home() {
         </div>
       </section>
 
-    
 
-      <section className="min-h-screen flex items-center justify-center bg-white">
-        <div className="max-w-3xl text-center">
-          <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">🍎 Farm Fresh Daily</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Best Selling Apples</h2>
-          <p className="text-xl text-gray-700">
-            Our top 2 customer favorites, hand-picked from our orchards every morning. Premium quality apples delivered fresh to your doorstep with guaranteed freshness and exceptional taste.
-          </p>
+
+      <section className="min-h-screen bg-white py-18">
+        <div className="max-w-5xl mx-auto px-4 py-18">
+
+          <div className="max-w-3xl mx-auto text-center mb-16 ">
+            <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              🍎 Farm Fresh Daily
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Best Selling Apples
+            </h2>
+            <p className="text-xl text-gray-700">
+              Our top 2 customer favorites, hand-picked from our orchards every morning.
+              Premium quality apples delivered fresh to your doorstep with guaranteed
+              freshness and exceptional taste.
+            </p>
+          </div>
+
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* card 1 */}
+            <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
+              <div className="relative">
+                <img
+                  src="/images/Royal.jpg"
+                  alt="Royal Delicious Apples"
+                  className="w-full h-72 object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  Premium
+                </span>
+              </div>
+
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-bold text-gray-900">
+                  Royal Delicious Apples
+                </h3>
+                <p className="text-gray-600 mt-2 text-sm">
+                  Premium red variety with exceptional sweetness and vibrant color.
+                  Perfect balance of crisp texture and royal quality, making them
+                  our customer favorite.
+                </p>
+
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="text-2xl font-bold text-gray-900">₹1499</span>
+                  <span className="line-through text-gray-400">₹1599</span>
+                  <span className="ml-auto bg-green-100 text-green-700 px-2 py-1 text-xs rounded">
+                    Save ₹99
+                  </span>
+                </div>
+
+                <button className="mt-4 w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+
+            {/* card 2 */}
+
+            <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
+              <div className="relative">
+                <img
+                  src="/images/mix.jpg"
+                  alt="Royal Delicious Apples"
+                  className="w-full h-72 object-cover"
+                />
+                <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  Best Value
+                </span>
+              </div>
+
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-bold text-gray-900">
+                  Royal Delicious Apples
+                </h3>
+                <p className="text-gray-600 mt-2 text-sm">
+                  Premium red variety with exceptional sweetness and vibrant color.
+                  Perfect balance of crisp texture and royal quality, making them
+                  our customer favorite.
+                </p>
+
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="text-2xl font-bold text-gray-900">₹1499</span>
+                  <span className="line-through text-gray-400">₹1599</span>
+                  <span className="ml-auto bg-green-100 text-green-700 px-2 py-1 text-xs rounded">
+                    Save ₹99
+                  </span>
+                </div>
+
+                <button className="mt-4 w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                  <span>Add to Cart</span>
+                </button>
+              </div>
+            </div>
+
+
+
+          </div>
+            <div className="max-w-xl mt-12 mx-auto flex items-center justify-center">
+             <button className="mt-4 w-1/2  bg-gray-900 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  <span>View all Apple Varieties</span>
+              </button>
+            </div>
         </div>
       </section>
 
-       <section className="min-h-screen flex items-center justify-center bg-white">
-        
-       </section>
+
+      <section className="min-h-screen flex items-center justify-center bg-white">
+
+      </section>
 
 
 
