@@ -14,13 +14,13 @@ const Navbar = () => {
 
             <div className='flex flex-col leading-tight'>
                 <span className='text-red-700 font-bold text-2xl'>Ambertale</span>
-                <span className='text-green-500 font-semibold text-sm'>FARMS</span>
+                <span className='text-green-600 font-medium text-sm'>FARMS</span>
             </div>
         </div>
 
         {/* Navlinks starts here */}
 
-        <ul className='flex space-x-8 text-gray-600 font-semibold text-sm'>
+        <ul className='flex space-x-12 text-gray-600 font-medium'>
             <li><Link href="/"></Link>Home</li>
              <li><Link href="/"></Link>Varieties</li>
               <li><Link href="/"></Link>About</li>
