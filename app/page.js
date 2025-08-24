@@ -49,6 +49,7 @@ export default function Home() {
 
 
       <section className="min-h-screen bg-white py-18">
+
         <div className="max-w-5xl mx-auto px-4 py-18">
 
           <div className="max-w-3xl mx-auto text-center mb-16 ">
@@ -143,18 +144,121 @@ export default function Home() {
             </div>
 
 
-
           </div>
-            <div className="max-w-xl mt-12 mx-auto flex items-center justify-center">
-             <button className="mt-4 w-1/2  bg-gray-900 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  <span>View all Apple Varieties</span>
-              </button>
-            </div>
+          <div className="max-w-xl mt-12 mx-auto flex items-center justify-center">
+            <button className="mt-4 w-1/2  bg-gray-900 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <span>View all Apple Varieties</span>
+            </button>
+          </div>
         </div>
       </section>
 
 
-      <section className="min-h-screen flex items-center justify-center bg-white">
+      <section className="min-h-screen py-2 px-6 bg-white">
+        <div className="text-center mb-6">
+          <span className="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+            🌱 Our Quality Promise
+          </span>
+        </div>
+
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Why Choose Our Apples?
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-xl">
+            Every apple reflects our commitment to purity, tradition, and excellence.
+            Discover what makes our apples extraordinary.
+          </p>
+        </div>
+
+        <div className="grid gap-10 md:grid-cols-4 sm:grid-cols-2 max-w-6xl mx-auto">
+
+          <div className="text-center">
+            <div className="w-32 h-32 mx-auto flex bg-green-50 rounded-2xl p-6 group-hover:bg-green-100 transition-all duration-300">
+              <img
+                alt="100% Wax Free"
+                loading="lazy"
+                width="128"
+                height="128"
+                decoding="async"
+                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                src="https://himira.co.in/_next/static/media/unprocessed_img.4a42e682.png"
+              />
+            </div>
+            <h3 className="mt-4 text-xl font-bold text-gray-900">100% Wax Free</h3>
+            <p className="mt-2 text-gray-600 text-md">
+              Natural apples without any artificial processing or chemical treatment.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-32 h-32 mx-auto flex bg-green-50 rounded-2xl p-6 group-hover:bg-green-100 transition-all duration-300">
+              <img
+                alt="100% Wax Free"
+                loading="lazy"
+                width="128"
+                height="128"
+                decoding="async"
+                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                   src="https://himira.co.in/_next/static/media/nature_img.a83024c3.png"
+              />
+            </div>
+            <h3 className="mt-4 text-xl font-bold text-gray-900">Responsible Farming</h3>
+            <p className="mt-2 text-gray-600 text-md">
+              Grown using sustainable farming practices.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-32 h-32 mx-auto flex bg-green-50 rounded-2xl p-6 group-hover:bg-green-100 transition-all duration-300">
+              <img
+                alt="100% Wax Free"
+                loading="lazy"
+                width="128"
+                height="128"
+                decoding="async"
+                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                  src="https://himira.co.in/_next/static/media/tradition_img.ce744cfa.png"
+              />
+            </div>
+            <h3 className="mt-4 text-xl font-bold text-gray-900">Traditional Methods</h3>
+            <p className="mt-2 text-gray-600 text-md">
+              Time-tested farming techniques passed down through generations
+            </p>
+          </div>
+
+
+          <div className="group text-center">
+            <div className="w-32 h-32 mx-auto flex bg-green-50 rounded-2xl p-6 group-hover:bg-green-100 transition-all duration-300">
+              <img
+                alt="100% Wax Free"
+                loading="lazy"
+                width="128"
+                height="128"
+                decoding="async"
+                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                 src="https://himira.co.in/_next/static/media/locally_grown_img.17eb0991.png"
+              />
+            </div>
+            <h3 className="mt-4 text-xl font-bold text-gray-900">Locally Grown</h3>
+            <p className="mt-2 text-gray-600 text-md">
+             Fresh from our local orchards to ensure peak quality and freshness
+            </p>
+          </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
 
       </section>
 
