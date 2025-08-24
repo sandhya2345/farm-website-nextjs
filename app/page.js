@@ -165,13 +165,13 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Why Choose Our Apples?
           </h2>
-          <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-xl">
+          <p className="mt-8 text-gray-600 max-w-3xl mx-auto text-xl">
             Every apple reflects our commitment to purity, tradition, and excellence.
             Discover what makes our apples extraordinary.
           </p>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-4 sm:grid-cols-2 max-w-6xl mx-auto">
+        <div className="grid gap-10 md:grid-cols-4 sm:grid-cols-2 max-w-6xl mx-auto py-8">
 
           <div className="text-center">
             <div className="w-32 h-32 mx-auto flex bg-green-50 rounded-2xl p-6 group-hover:bg-green-100 transition-all duration-300">
@@ -200,7 +200,7 @@ export default function Home() {
                 height="128"
                 decoding="async"
                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                   src="https://himira.co.in/_next/static/media/nature_img.a83024c3.png"
+                src="https://himira.co.in/_next/static/media/nature_img.a83024c3.png"
               />
             </div>
             <h3 className="mt-4 text-xl font-bold text-gray-900">Responsible Farming</h3>
@@ -218,7 +218,7 @@ export default function Home() {
                 height="128"
                 decoding="async"
                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                  src="https://himira.co.in/_next/static/media/tradition_img.ce744cfa.png"
+                src="https://himira.co.in/_next/static/media/tradition_img.ce744cfa.png"
               />
             </div>
             <h3 className="mt-4 text-xl font-bold text-gray-900">Traditional Methods</h3>
@@ -237,28 +237,54 @@ export default function Home() {
                 height="128"
                 decoding="async"
                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                 src="https://himira.co.in/_next/static/media/locally_grown_img.17eb0991.png"
+                src="https://himira.co.in/_next/static/media/locally_grown_img.17eb0991.png"
               />
             </div>
             <h3 className="mt-4 text-xl font-bold text-gray-900">Locally Grown</h3>
             <p className="mt-2 text-gray-600 text-md">
-             Fresh from our local orchards to ensure peak quality and freshness
+              Fresh from our local orchards to ensure peak quality and freshness
             </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section className="min-h-screen py-2 px-6 bg-white">
+
+        <div className="max-w-6xl mx-auto px-4 py-18 rounded-2xl bg-green-50">
+
+          <div className="text-center ">
+            <div className="inline-flex items-center bg-white/80 backdrop-blur-sm text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              🎬 Behind the scenes
+            </div>
+          </div>
+
+          <div className="text-center mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Farm Story
+            </h2>
+            <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-xl">
+              See how we cultivate premium apples with traditional methods and modern care in
+              the beautiful Himalayan foothills
+            </p>
+          </div>
+
+          <div className="flex justify-center mt-16">
+            <div className="w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dGswBx8EoFQ"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
 
 
 
 
-
-
-
-
-
-
         </div>
-
-
-
 
       </section>
 
