@@ -1,4 +1,4 @@
-import { Apple, CircleCheckBig, HeadphonesIcon, Instagram, Mail, MessageSquare, ShoppingCart, Star, Truck } from 'lucide-react'
+import { Apple, CircleCheckBig, HeadphonesIcon, Instagram, Mail, MessageSquare, Send, ShoppingCart, Star, Truck } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -106,6 +106,30 @@ const Contact = () => {
                     <span>Shipping</span>
                   </label>
                 </div>
+
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4'>
+                  <div>
+                    <label>Name *</label>
+                    <input className='w-full px-4 py-2  mt-2 rounded-xl border transition-all text-gray-400 bg-white focus:border-red-500 focus:ring-red-200 focus:outline-none focus:ring-2' placeholder='Your name' type='text' name='name' />
+                  </div>
+                     <div>
+                    <label>Email *</label>
+                    <input className='w-full px-4 py-2 mt-2 rounded-xl border transition-all text-gray-400 bg-white focus:border-red-500 focus:ring-red-200 focus:outline-none focus:ring-2' placeholder='Your name' type='text' name='name' />
+                  </div>
+                </div>
+
+                <div className='mt-6'>
+                    <label>Message *</label>
+                    <textarea id="message" name="message" rows="5" className='w-full px-4 py-3 rounded-xl mt-2 border transition-all resize-none text-gray-900 bg-white placeholder:text-gray-500 border-gray-300 focus:border-red-500 focus:ring-red-200 focus:outline-none focus:ring-2'
+                     placeholder="Tell us how we can help you..."></textarea>
+                </div>
+
+                <button className='bg-red-700 hover:bg-red-800 mt-6 font-semibold text-white px-6 py-4 rounded-xl flex gap-4 w-full items-center justify-center'>
+                  <Send/>
+                  Send Message
+
+                </button>
+
               </div>
 
             </form>
@@ -115,6 +139,8 @@ const Contact = () => {
         </div>
 
       </section>
+
+      {/* this section ends here */}
 
 
 
