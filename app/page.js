@@ -144,9 +144,9 @@ export default function Home() {
                 </button>
               </div>
             </div>
-
-
           </div>
+
+          
           <div className="max-w-xl mt-12 mx-auto flex items-center justify-center">
             <button className="mt-4 w-1/2  bg-gray-900 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               <span>View all Apple Varieties</span>

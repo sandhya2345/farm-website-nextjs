@@ -1,4 +1,4 @@
-import { Apple, CircleCheckBig, HeadphonesIcon, Instagram, Mail, MessageCircle, MessageSquare, ShoppingCart, Star, Truck } from 'lucide-react'
+import { Apple, CircleCheckBig, HeadphonesIcon, Instagram, Mail, MessageSquare, ShoppingCart, Star, Truck } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -115,6 +115,9 @@ const Contact = () => {
         </div>
 
       </section>
+
+
+
 
     </div>
   )
