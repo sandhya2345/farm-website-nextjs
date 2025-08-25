@@ -142,6 +142,38 @@ const Contact = () => {
 
       {/* this section ends here */}
 
+      <section className='py-12 bg-white'>
+         <div className='max-w-4xl mx-auto px-4'>
+             <div className='text-center mb-8'>
+              <h1 className='text-2xl sm:text-3xl font-bold text-gray-900 mb-4'>Quick Answers</h1>
+              <p className='text-gray-600 text-meduim'>Common questions about our apples</p>
+            </div>
+
+            <div className='space-y-4'>
+              <div className='bg-gray-50 hover:bg-gray-100 rounded-xl p-6'>
+                <h3 className='font-semibold text-gray-800'>Do you deliver nationwide?</h3>
+                <p className='text-gray-600'>Yes! We do offer nationwide delivery.</p>
+              </div>
+
+               <div className='bg-gray-50 hover:bg-gray-100 rounded-xl p-6'>
+                <h3 className='font-semibold text-gray-800'>How do you keep apples fresh?</h3>
+                <p className='text-gray-600'>Cold storage and premium packaging. Shipped within 24 hours of your order.</p>
+              </div>
+               <div className='bg-gray-50 hover:bg-gray-100 rounded-xl p-6'>
+                <h3 className='font-semibold text-gray-800'>Do you offer bulk pricing?</h3>
+                <p className='text-gray-600'>Yes, special rates for 50kg+ orders. Contact our sales team for quotes.</p>
+              </div>
+               <div className='bg-gray-50 hover:bg-gray-100 rounded-xl p-6'>
+                <h3 className='font-semibold text-gray-800'>What's your return policy?</h3>
+                <p className='text-gray-600'>100% satisfaction guarantee. Contact us within 48 hours if not satisfied.</p>
+              </div>
+
+            </div>
+
+         </div>
+
+      </section>
+
 
 
 
