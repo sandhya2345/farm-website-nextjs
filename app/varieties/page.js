@@ -1,4 +1,4 @@
-import { ChevronDown } from 'lucide-react'
+import { ArrowBigRight, ArrowRight, ChevronDown } from 'lucide-react'
 import React from 'react'
 import VarietyCard from "@/components/ui/Cards/VarietyCard";
 
@@ -6,39 +6,39 @@ import VarietyCard from "@/components/ui/Cards/VarietyCard";
 const Varieties = () => {
 
     const varieties = [
-    {
-      image: "/images/Royal.jpg",
-      badge: "Bestseller",
-      title: "Royal Delicious Apples",
-      description:
-        "Premium red variety with exceptional sweetness and vibrant color.",
-      price: 1499,
-      oldPrice: 1599,
-      discount: "Save ₹99",
-    },
+        {
+            image: "/images/Royal.jpg",
+            badge: "Bestseller",
+            title: "Royal Delicious Apples",
+            description:
+                "Premium red variety with exceptional sweetness and vibrant color.",
+            price: 1499,
+            oldPrice: 1599,
+            discount: "Save ₹99",
+        },
 
-    {
-      image: "/images/Royal.jpg",
-      badge: "Bestseller",
-      title: "Royal Delicious Apples",
-      description:
-        "Premium red variety with exceptional sweetness and vibrant color.",
-      price: 1499,
-      oldPrice: 1599,
-      discount: "Save ₹99",
-    },
-    {
-      image: "/images/Royal.jpg",
-      badge: "Bestseller",
-      title: "Royal Delicious Apples",
-      description:
-        "Premium red variety with exceptional sweetness and vibrant color.",
-      price: 1499,
-      oldPrice: 1599,
-      discount: "Save ₹99",
-    },
-]
-    
+        {
+            image: "/images/Royal.jpg",
+            badge: "Bestseller",
+            title: "Royal Delicious Apples",
+            description:
+                "Premium red variety with exceptional sweetness and vibrant color.",
+            price: 1499,
+            oldPrice: 1599,
+            discount: "Save ₹99",
+        },
+        {
+            image: "/images/Royal.jpg",
+            badge: "Bestseller",
+            title: "Royal Delicious Apples",
+            description:
+                "Premium red variety with exceptional sweetness and vibrant color.",
+            price: 1499,
+            oldPrice: 1599,
+            discount: "Save ₹99",
+        },
+    ]
+
     return (
         <div className='relative top-21 bg-gradient-to-b from-green-50  to-white min-h-screen'>
             <div className="max-w-3xl mx-auto text-center py-20 ">
@@ -70,20 +70,46 @@ const Varieties = () => {
 
                 </div>
 
-
-
             </div>
-            
-            <div className='max-w-7xl mx-auto px-6 py-16 '>
+
+            <div className='max-w-7xl mx-auto px-6 py-16 mb-8 '>
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
-                    {varieties.map((item,index) => (
-                        <VarietyCard key={index} {...item}/>
-                        
+                    {varieties.map((item, index) => (
+                        <VarietyCard key={index} {...item} />
+
                     ))}
 
 
                 </div>
+            </div>
+
+            <div className='max-w-3xl mx-auto text-center'>
+                <h3 className='text-2xl font-semibold mb-2'>Stay fresh with our updates</h3>
+                <p className='text-gray-600 mb-8'>Get seasonal variety updates, harvest news, and exclusive offers delivered to your inbox.</p>
+
+                <form>
+                    <div className='flex flex-col sm:flex-row gap-3 max-w-md mx-auto pb-12'>
+                        <input
+                            type="email"
+                            placeholder="Your email address"
+                            className='flex-1 px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-50 transition-all duration-300'
+                        />
+
+                        <button
+                            type="button"
+                            className="px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+                        >
+                            Subscribe
+                            <ArrowRight className="w-4 h-4" />
+                        </button>
                     </div>
+
+
+                </form>
+
+
+            </div>
+
         </div>
     )
 }

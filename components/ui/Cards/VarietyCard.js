@@ -8,7 +8,7 @@ const VarietyCard = ({
         <div className='bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full'>
 
             <div className="relative">
-                <img src={image} alt={title} className="w-full h-72 object-cover" />
+                <img src={image} alt={title} className="w-full h-full object-cover" />
                 <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
                     {badge}
                 </span>
