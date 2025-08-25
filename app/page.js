@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* next section starts here */}
       <section className="min-h-screen py-2 px-6 bg-white">
         <div className="text-center mb-6">
           <span className="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
@@ -250,6 +250,8 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* next section starts here */}
 
       <section className="min-h-screen py-2 px-6 bg-white">
 
