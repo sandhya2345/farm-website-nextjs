@@ -75,7 +75,7 @@ const Varieties = () => {
             </div>
             
             <div className='max-w-7xl mx-auto px-6 py-16 '>
-                <div className='grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
                     {varieties.map((item,index) => (
                         <VarietyCard key={index} {...item}/>
                         
