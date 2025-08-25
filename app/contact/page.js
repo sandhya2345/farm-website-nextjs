@@ -1,4 +1,5 @@
-import { Apple, ArrowRightCircle, CircleCheck, CircleCheckBig, Star } from 'lucide-react'
+import { Apple, CircleCheckBig, HeadphonesIcon, Instagram, Mail, MessageCircle, MessageSquare, ShoppingCart, Star, Truck } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 const Contact = () => {
@@ -7,7 +8,7 @@ const Contact = () => {
       <section className='bg-gradient-to-br from-green-50 to-red-50  sm:py-20'>
         <div className='max-w-4xl mx-auto px-4 text-center'>
           <div className='inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full mb-6'>
-            <Apple className='h-4 w-4'/>
+            <Apple className='h-4 w-4' />
 
             <span className="text-sm font-medium">Contact Us</span>
           </div>
@@ -16,17 +17,98 @@ const Contact = () => {
 
           <div className='flex flex-wrap items-center justify-center text-sm text-gray-600 gap-6'>
             <div className='flex items-center gap-2'>
-              <CircleCheckBig className='text-green-600 h-4 w-4'/>
-              
+              <CircleCheckBig className='text-green-600 h-4 w-4' />
+
               <span>24/7 Support</span>
 
             </div>
 
             <div className='flex items-center gap-2'>
-              <Star className='text-yellow-400 h-4 w-4'/>
+              <Star className='text-yellow-400 h-4 w-4' />
               <span>4.9/5 Rating</span>
 
             </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* next section starts here */}
+
+      <section className='py-12 bg-white'>
+        <div className='max-w-6xl mx-auto px-4'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+            <Link href="https://whatsapp" className="group bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg hover:border-green-300 transition-all duration-300">
+              <div className='flex items-center gap-4'>
+                <div className='w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center group-hover:bg-green-100 transition-colors'>
+                  <Instagram />
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Instagram</h3>
+                  <p className="text-green-600 font-medium">9898989898</p>
+                  <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM</p>
+                </div>
+
+
+              </div>
+
+            </Link>
+
+            <Link href="https://facebook.com" className="group bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg hover:border-green-300 transition-all duration-300">
+              <div className='flex items-center gap-4'>
+                <div className='w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center group-hover:bg-green-100 transition-colors'>
+                  <Mail />
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Email Us</h3>
+                  <p className="text-blue-600 font-medium">AppleTalesFarms@gmail.com</p>
+                  <p className="text-sm text-gray-500">Quick Response</p>
+                </div>
+
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* next section starts here */}
+      <section className='py-12 bg-gray-100'>
+        <div className='max-w-4xl mx-auto px-4'>
+          <div className='bg-white rounded-3xl shadow p-6 sm:p-8'>
+            <div className='text-center mb-8'>
+              <h1 className='text-2xl sm:text-3xl font-bold text-gray-900 mb-2'>Send a Message</h1>
+              <p className='text-gray-600 text-meduim'>We'll get back to you within 24 hours</p>
+            </div>
+            <form className='space-y-6'>
+              <div>
+                <label className=''>What's this about?</label>
+                <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 '>
+                  <label className="cursor-pointer p-3 mt-2 rounded-xl border transition-all text-center border-red-600 bg-red-50 text-red-700">
+                    <MessageSquare className='mx-auto h-5 w-5' />
+                    <span>General</span>
+                  </label>
+                  <label className="cursor-pointer p-3 mt-2 rounded-xl border transition-all text-center border-gray-200  text-gray-600">
+                    <ShoppingCart className='mx-auto h-5 w-5' />
+                    <span>Orders</span>
+                  </label>
+
+                  <label className="cursor-pointer p-3 mt-2 rounded-xl border transition-all text-center border-gray-200  text-gray-600">
+                    <HeadphonesIcon className='mx-auto h-5 w-5' />
+                    <span>Support</span>
+                  </label>
+
+                  <label className="cursor-pointer p-3 mt-2 rounded-xl border transition-all text-center border-gray-200  text-gray-600">
+                    <Truck className='mx-auto h-5 w-5' />
+                    <span>Shipping</span>
+                  </label>
+                </div>
+              </div>
+
+            </form>
 
           </div>
 
