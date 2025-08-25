@@ -21,7 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Appletale",
+  title: "Appletales",
   description: "where each apple tells the story",
 };
 
