@@ -14,7 +14,10 @@ const Footer = () => {
           <p className='text-gray-600 mb-8'>Get seasonal variety updates, harvest news, and exclusive offers delivered to your inbox.</p>
 
           <form>
-            <div className='flex flex-col sm:flex-row gap-3 max-w-md mx-auto pb-12'>
+            <div>
+              
+            </div>
+            <div className='flex flex-col sm:flex-row gap-3 max-w-md mx-auto pb-6'>
               <input
                 type="email"
                 placeholder="Your email address"
@@ -30,14 +33,13 @@ const Footer = () => {
               </button>
             </div>
 
-
-
+            <p className='text-sm text-gray-500'>Stay updated with our latest harvests and apple varieties</p>
           </form>
         </div>
       </div>
 
 
-      <div className='border-t border-gray-300 py-6'>
+      <div className='border-t border-gray-300'>
         <div className="max-w-7xl mx-auto px-6 py-16">
 
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8'>
@@ -59,7 +61,7 @@ const Footer = () => {
             </div>
 
             {/* company section */}
-            <div className='mx-8'>
+            <div className='mx-2'>
               <h4 className='font-semibold mb-3 '>Company</h4>
               <ul className='space-y-3 text-gray-600 text-sm'>
                 <li><Link href="#">About Us</Link></li>
@@ -84,7 +86,7 @@ const Footer = () => {
             <div>
               <h4 className='font-semibold mb-3'>Contact</h4>
               <ul className='space-y-3 text-gray-600 text-sm'>
-                
+
                 <li className="flex items-center gap-2">
                   <MapPin className="text-red-600 h-6 w-6" /> Mustang
                 </li>

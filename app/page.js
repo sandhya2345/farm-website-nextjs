@@ -1,6 +1,8 @@
+
+"use client"
 import Image from "next/image";
 
-import { Leaf, ArrowDown, FacebookIcon, YoutubeIcon } from "lucide-react";
+import { Leaf, ArrowDown, FacebookIcon, YoutubeIcon, X, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Instagram, Facebook, Youtube, Mail, MessageCircle } from "lucide-react";
 
@@ -289,7 +291,7 @@ export default function Home() {
 
       </section>
 
-      <section className="py-2 px-6 bg-white">
+      <section className="py-2 px-6 bg-gradient-to-br from-white via-white to-red-50">
         <div className="max-w-5xl mx-auto px-4 py-18 rounded-2xl">
           <div className="text-center mb-4">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
@@ -304,9 +306,9 @@ export default function Home() {
             <Link
             href="https://instagram.com"
             target="_blank"
-            className="flex flex-col items-center justify-center p-12 border border-green-200 rounded-xl hover:shadow-lg transition"
+            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
           >
-             <Instagram className="w-12 h-12 text-gray-800 mb-3" />
+             <Instagram className="w-10 h-10 text-gray-800 mb-3" />
             <h3 className="font-semibold">Instagram</h3>
             <p className="text-sm text-gray-500">@ambertalefarms</p>
             <span className="text-gray-500 text-sm mt-2">Follow↗</span>
@@ -316,9 +318,9 @@ export default function Home() {
           <Link
             href="https://instagram.com"
             target="_blank"
-            className="flex flex-col items-center justify-center p-12 border border-green-200 rounded-xl hover:shadow-lg transition"
+            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
           >
-             <FacebookIcon className="w-12 h-12 text-gray-800 mb-3" />
+             <Twitter className="w-10 h-10 text-gray-800 mb-3" />
             <h3 className="font-semibold">Instagram</h3>
             <p className="text-sm text-gray-500">@appletales</p>
             <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
@@ -328,9 +330,9 @@ export default function Home() {
            <Link
             href="https://instagram.com"
             target="_blank"
-            className="flex flex-col items-center justify-center p-12 border border-green-200 rounded-xl hover:shadow-lg transition"
+            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
           >
-             <FacebookIcon className="w-12 h-12 text-gray-800 mb-3" />
+             <FacebookIcon className="w-10 h-10 text-gray-800 mb-3" />
             <h3 className="font-semibold">Facebook</h3>
             <p className="text-sm text-gray-500">@appletales</p>
             <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
@@ -340,9 +342,9 @@ export default function Home() {
           <Link
             href="https://instagram.com"
             target="_blank"
-            className="flex flex-col items-center justify-center p-12 border border-green-200 rounded-xl hover:shadow-lg transition"
+            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
           >
-             <YoutubeIcon className="w-12 h-12 text-gray-800 mb-3" />
+             <YoutubeIcon className="w-10 h-10 text-gray-800 mb-3" />
             <h3 className="font-semibold">YouTube</h3>
             <p className="text-sm text-gray-500">@appletales</p>
             <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
@@ -352,9 +354,9 @@ export default function Home() {
           <Link
             href="https://instagram.com"
             target="_blank"
-            className="flex flex-col items-center justify-center p-12 border border-green-200 rounded-xl hover:shadow-lg transition"
+            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
           >
-             <Mail className="w-12 h-12 text-gray-800 mb-3" />
+             <Mail className="w-10 h-10 text-gray-800 mb-3" />
             <h3 className="font-semibold">E-Mail</h3>
             <p className="text-sm text-gray-500">@appletales</p>
             <span className="text-gray-500 mt-2">Follow ↗</span>
