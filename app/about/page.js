@@ -4,7 +4,7 @@ import React from 'react'
 const About = () => {
     return (
         <div>
-            <section className="relative pb-12 sm:pt-24 sm:pb-16 lg:py-32 lg:pb-20 bg-gradient-to-br from-green-100 via-white to-red-50 overflow-hidden">
+            <section className="relative pb-12 pt-24 sm:pb-16 lg:py-32 lg:pb-20 bg-gradient-to-br from-green-100 via-white to-red-50 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20">
                         <div className='inline-flex items-center mt-18 bg-white/80 backdrop-blur-sm border border-green-200 text-green-800 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm font-medium mb-6 sm:mb-8 shadow-sm'>

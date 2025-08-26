@@ -53,8 +53,8 @@ const Varieties = () => {
                     to your doorstep with guaranteed freshness and exceptional taste.
                 </p>
             </div>
-            <div className="max-w-7xl mx-auto flex justify-between items-center mb-12 px-6">
-                <p className='text-gray-500'>Showing
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center sm:mb-12 px-6">
+                <p className='text-gray-500 '>Showing
                     <span className='text-black font-semibold mx-1'>5</span>
                     Varieties
                 </p>

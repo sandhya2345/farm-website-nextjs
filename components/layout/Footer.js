@@ -10,14 +10,14 @@ const Footer = () => {
 
 
         <div className='max-w-3xl mx-auto text-center'>
-          <h3 className='text-2xl font-semibold mb-2'>Stay fresh with our updates</h3>
-          <p className='text-gray-600 mb-8'>Get seasonal variety updates, harvest news, and exclusive offers delivered to your inbox.</p>
+          <h3 className='text-2xl font-semibold mb-2 '>Stay fresh with our updates</h3>
+          <p className='text-gray-600 mb-8 px-6'>Get seasonal variety updates, harvest news, and exclusive offers delivered to your inbox.</p>
 
           <form>
             <div>
               
             </div>
-            <div className='flex flex-col sm:flex-row gap-3 max-w-md mx-auto pb-6'>
+            <div className='flex flex-col sm:flex-row px-6 sm:px-2 gap-3 max-w-md mx-auto pb-6'>
               <input
                 type="email"
                 placeholder="Your email address"
@@ -43,7 +43,6 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-16">
 
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8'>
-
 
             <div>
               <div className="flex items-center space-x-2">
