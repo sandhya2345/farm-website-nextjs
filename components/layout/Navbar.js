@@ -1,22 +1,21 @@
 "use client"
 
-import React from 'react'
-import { Apple, Search, User, ShoppingBag } from "lucide-react";
+import React, { useState } from 'react'
+import { Apple, Search, User, ShoppingBag, X, Menu } from "lucide-react";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-    
+
     const pathname = usePathname();
+    const [menuOn, setMenuOn] = useState(false)
 
     const links = [
-    { href: "/", label: "Home" },
-    { href: "/varieties", label: "Varieties" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ];
-
-
+        { href: "/", label: "Home" },
+        { href: "/varieties", label: "Varieties" },
+        { href: "/about", label: "About" },
+        { href: "/contact", label: "Contact" },
+    ];
 
 
     return (
@@ -43,7 +42,7 @@ const Navbar = () => {
                     <li><Link href="/contact">Contact</Link></li>
                 </ul> */}
 
-                  <ul className='flex space-x-12 text-gray-600 font-medium'>
+                <ul className='hidden md:flex space-x-12 text-gray-600 font-medium'>
 
                     {
                         links.map((link) => {
@@ -52,11 +51,10 @@ const Navbar = () => {
                             return (
                                 <li key={link.href}>
                                     <Link href={link.href}
-                                    className={`pb-1 transition-colors ${
-                                        isClicked ? "text-red-600 border-b-2 border-red-600"
-                                        : "text-gray-600 hover:text-red-600"
+                                        className={`pb-1 transition-colors ${isClicked ? "text-red-600 border-b-2 border-red-600"
+                                                : "text-gray-600 hover:text-red-600"
 
-                                    }`}
+                                            }`}
                                     >
                                         {link.label}
                                     </Link>
@@ -68,30 +66,27 @@ const Navbar = () => {
                         )
                     }
 
-
-
-                    </ul>
-
-
+                </ul>
 
 
                 {/* Icons starts here */}
-                <div className='flex items-center space-x-6 text-gray-600'>
+                <div className='hidden md:flex items-center space-x-6 text-gray-600'>
                     <Search className='w-5 h-5' />
                     <User className='w-5 h-5' />
                     <ShoppingBag className='w-5 h-5' />
 
                 </div>
 
+                <button
+                    className='md:hidden text-gray-700'
+                    onClick={() => setMenuOn(!menuOn)
 
+                    }>
+                    {menuOn ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
 
+                </button>
 
-
-
-
-
-
-
+                
 
 
             </div>

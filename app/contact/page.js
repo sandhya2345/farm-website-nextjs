@@ -4,8 +4,8 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className='min-h-screen py-20 bg-white'>
-      <section className='bg-gradient-to-br from-green-50 to-red-50  sm:py-20'>
+    <div className='min-h-screen py-20  bg-white'>
+      <section className='bg-gradient-to-br from-green-50 to-red-50  py-20'>
         <div className='max-w-4xl mx-auto px-4 text-center'>
           <div className='inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full mb-6'>
             <Apple className='h-4 w-4' />
