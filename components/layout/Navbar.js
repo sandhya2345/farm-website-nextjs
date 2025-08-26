@@ -52,7 +52,7 @@ const Navbar = () => {
                                 <li key={link.href}>
                                     <Link href={link.href}
                                         className={`pb-1 transition-colors ${isClicked ? "text-red-600 border-b-2 border-red-600"
-                                                : "text-gray-600 hover:text-red-600"
+                                            : "text-gray-600 hover:text-red-600"
 
                                             }`}
                                     >
@@ -85,11 +85,37 @@ const Navbar = () => {
                     {menuOn ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
 
                 </button>
-
-                
-
-
             </div>
+
+            {
+                menuOn && (
+                    <div className='md:hidden bg-white/90 backdrop-blur-md border-t border-gray-200 shadow-md'>
+                        <ul className='flex flex-col items-center space-y-6 py-6 text-gray-700 font-medium'>
+                            {links.map((link) => {
+                                
+                                const isClicked = pathname === link.href;
+                                return (
+                                    <li key={link.href}>
+                                        <Link
+                                            href={link.href}
+                                            className={`transition-colors ${isClicked
+                                                    ? "text-red-600 font-semibold"
+                                                    : "hover:text-red-600"
+                                                }`}
+                                            onClick={() => setMenuOn(false)}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
+
+                        </ul>
+
+                    </div>
+
+                )
+            }
 
 
 
