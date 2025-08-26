@@ -11,8 +11,8 @@ const About = () => {
                         <Camera className='w-4 h-4 mx-2'/>
                             Our Story
                         </div>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">From Business Person<br/>
-                            <span className='text-red-600'>to Apple Farmers</span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">From Business Mindset<br/>
+                            <span className='text-red-600'>to Apple Farming</span>
                          </h1>
                          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto px-4 sm:px-0">
                             We're young visioners who also grow apples in the beautiful mountains of Mustang. 
