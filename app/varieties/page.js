@@ -1,43 +1,44 @@
-import { ArrowBigRight, ArrowRight, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import React from 'react'
 import VarietyCard from "@/components/ui/Cards/VarietyCard";
+import { varieties } from "@/lib/data/varieties";
 
 
 const Varieties = () => {
 
-    const varieties = [
-        {
-            image: "/images/Royal.jpg",
-            badge: "Bestseller",
-            title: "Royal Delicious Apples",
-            description:
-                "Premium red variety with exceptional sweetness and vibrant color.",
-            price: 1499,
-            oldPrice: 1599,
-            discount: "Save ₹99",
-        },
+    // const varieties = [
+    //     {
+    //         image: "/images/Royal.jpg",
+    //         badge: "Bestseller",
+    //         title: "Royal Delicious Apples",
+    //         description:
+    //             "Premium red variety with exceptional sweetness and vibrant color.",
+    //         price: 1499,
+    //         oldPrice: 1599,
+    //         discount: "Save ₹99",
+    //     },
 
-        {
-            image: "/images/Royal.jpg",
-            badge: "Bestseller",
-            title: "Royal Delicious Apples",
-            description:
-                "Premium red variety with exceptional sweetness and vibrant color.",
-            price: 1499,
-            oldPrice: 1599,
-            discount: "Save ₹99",
-        },
-        {
-            image: "/images/Royal.jpg",
-            badge: "Bestseller",
-            title: "Royal Delicious Apples",
-            description:
-                "Premium red variety with exceptional sweetness and vibrant color.",
-            price: 1499,
-            oldPrice: 1599,
-            discount: "Save ₹99",
-        },
-    ]
+    //     {
+    //         image: "/images/Royal.jpg",
+    //         badge: "Bestseller",
+    //         title: "Royal Delicious Apples",
+    //         description:
+    //             "Premium red variety with exceptional sweetness and vibrant color.",
+    //         price: 1499,
+    //         oldPrice: 1599,
+    //         discount: "Save ₹99",
+    //     },
+    //     {
+    //         image: "/images/Royal.jpg",
+    //         badge: "Bestseller",
+    //         title: "Royal Delicious Apples",
+    //         description:
+    //             "Premium red variety with exceptional sweetness and vibrant color.",
+    //         price: 1499,
+    //         oldPrice: 1599,
+    //         discount: "Save ₹99",
+    //     },
+    // ]
 
     return (
         <div className='relative top-21 bg-gradient-to-b from-green-50  to-white min-h-screen'>
@@ -74,8 +75,8 @@ const Varieties = () => {
 
             <div className='max-w-7xl mx-auto px-6 py-16 mb-8 '>
                 <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
-                    {varieties.map((item, index) => (
-                        <VarietyCard key={index} {...item} />
+                    {varieties.map((item) => (
+                        <VarietyCard key={item.slug} {...item} />
 
                     ))}
 
