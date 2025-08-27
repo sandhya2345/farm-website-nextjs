@@ -1,10 +1,14 @@
+import Link from 'next/link'
 import React from 'react'
 
 const VarietyCard = ({
-    image, badge, title, description, price, oldPrice, discount
+    slug, image, badge, title, description, price, oldPrice, discount
 }) => {
 
     return (
+
+         <Link href={`/varieties/${slug}`} className="block h-full">
+
         <div className='bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full'>
 
             <div className="relative">
@@ -33,6 +37,7 @@ const VarietyCard = ({
             </div>
         </div>
 
+         </Link>
     )
 }
 

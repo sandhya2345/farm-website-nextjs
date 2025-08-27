@@ -6,39 +6,6 @@ import { varieties } from "@/lib/data/varieties";
 
 const Varieties = () => {
 
-    // const varieties = [
-    //     {
-    //         image: "/images/Royal.jpg",
-    //         badge: "Bestseller",
-    //         title: "Royal Delicious Apples",
-    //         description:
-    //             "Premium red variety with exceptional sweetness and vibrant color.",
-    //         price: 1499,
-    //         oldPrice: 1599,
-    //         discount: "Save ₹99",
-    //     },
-
-    //     {
-    //         image: "/images/Royal.jpg",
-    //         badge: "Bestseller",
-    //         title: "Royal Delicious Apples",
-    //         description:
-    //             "Premium red variety with exceptional sweetness and vibrant color.",
-    //         price: 1499,
-    //         oldPrice: 1599,
-    //         discount: "Save ₹99",
-    //     },
-    //     {
-    //         image: "/images/Royal.jpg",
-    //         badge: "Bestseller",
-    //         title: "Royal Delicious Apples",
-    //         description:
-    //             "Premium red variety with exceptional sweetness and vibrant color.",
-    //         price: 1499,
-    //         oldPrice: 1599,
-    //         discount: "Save ₹99",
-    //     },
-    // ]
 
     return (
         <div className='relative top-21 bg-gradient-to-b from-green-50  to-white min-h-screen'>
