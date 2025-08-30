@@ -44,6 +44,12 @@ const VarietyDetails = ({ params }) => {
                 fill
                 className="object-cover rounded-xl"
               />
+            <div className='absolute top-4 left-4 flex flex-col gap-2 z-10"'>
+              <div>
+              <span className='bg-red-600 text-white py-1 px-6  text-sm font-medium rounded-xl'>{variety.badge}</span>
+              </div>
+              <span className='bg-blue-600 text-white py-1 px-6 text-sm font-medium rounded-xl'>{variety.title}</span>
+            </div>
             </div>
           </div>
           {/* images ends here */}
