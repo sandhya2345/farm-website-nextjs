@@ -1,7 +1,7 @@
 "use client"
 
 import { varieties } from '@/lib/data/varieties'
-import { ArrowLeft, ArrowRight, CircleQuestionMark } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Award, CircleQuestionMark, Leaf, Minus, Plus, Shield, ShoppingCart, Truck } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
@@ -34,9 +34,10 @@ const VarietyDetails = ({ params }) => {
       </div>
 
       <div className='max-w-7xl mx-auto px-4'>
-        <div className='grid grid-cols-12 gap-8 mt-8'>
-          <div className='lg:col-span-6 mb-6 lg:mb-0'>
-            <div className="relative w-[550px] h-[400px]">
+       <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8'>
+          {/* main image here */}
+          <div className="lg:col-span-6 flex justify-center">
+            <div className="relative w-full max-w-[550px] h-[250px] sm:h-[350px] lg:h-[400px]">
               <Image
                 src={clickedApple}
                 alt="Apple Image"
@@ -44,12 +45,13 @@ const VarietyDetails = ({ params }) => {
                 className="object-cover rounded-xl"
               />
             </div>
-
-
-
           </div>
+          {/* images ends here */}
+
+          {/* right content starts here */}
+
           <div className='lg:col-span-6'>
-            <h1 className='font-bold text-4xl mb-2'>{variety.title}</h1>
+            <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 leading-tight'>{variety.title}</h1>
             <p className='text-gray-500 text-lg font-medium mb-4'>Premium Quality</p>
             <p className='text-3xl font-semibold mb-4'>₹{variety.price}</p>
             <p className='text-gray-600 mb-4'>{variety.longDescription}</p>
@@ -79,9 +81,70 @@ const VarietyDetails = ({ params }) => {
                 </div>
               </button>
             </div>
-          <div className='mb-4 flex items-center justify-between'>
-           <span className='text-sm text-gray-600'>🎁 Get 5% OFF on orders above 5kg</span>
-          </div>
+            <div className='mb-4 flex items-center justify-between'>
+              <span className='text-sm text-gray-600'>🎁 Get 5% OFF on orders above 5kg</span>
+            </div>
+
+
+
+
+
+            <div className='space-y-6 '>
+              <label className='font-semibold text-gray-900 mb-3'>Quantity</label>
+              <div className='flex items-center gap-5'>
+                <div className='flex items-center border mt-3 border-gray-300 bg-white rounded-xl shadow'>
+                  <button className='p-3 hover:bg-gray-50 transition-colors text-gray-700'>
+                    <Minus/>
+                  </button>
+                  <span className='px-4 py-3 border-x border-gray-300 min-w-[60px] text-center text-gray-900 font-semibold"'>1</span>
+                  <button className='p-3 hover:bg-gray-50 transition-colors text-gray-700 d'>
+                    <Plus/>
+                  </button>
+                </div>
+                <div className='font-bold text-xl mt-2'>
+                  Total: ₹1499
+                </div>
+              </div>
+              <div className='flex flex-col sm:flex-row gap-4 '>
+                <button className='flex-1 flex justify-center gap-2 font-semibold border py-4 px-6 rounded-xl bg-red-700 text-white'>
+                  <ShoppingCart className='w-5 h-5'/>
+                  Add to cart
+                  </button>
+                <button className='flex-1  gap-2 font-semibold border py-4 px-6 rounded-xl bg-gray-900 text-white'>
+                  Buy Now
+                </button>
+
+              </div>
+
+              <div className='grid grid-cols-2 gap-4 mt-8'>
+                <div className='flex items-center gap-2'>
+                  <Truck className='w-5 h-5 text-green-600'/>
+                  <span className='text-sm text-gray-600'>Best Prices</span>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                  <Shield className='w-5 h-5 text-blue-600'/>
+                  <span className='text-sm text-gray-600'>Quality guarantee</span>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                  <Leaf className='w-5 h-5 text-green-600'/>
+                  <span className='text-sm text-gray-600'>100% Naturally grown</span>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                  <Award className='w-5 h-5 text-purple-600'/>
+                  <span className='text-sm text-gray-600'>Award winning</span>
+                </div>
+
+
+                
+
+
+              </div>
+
+
+            </div>
           </div>
 
 
