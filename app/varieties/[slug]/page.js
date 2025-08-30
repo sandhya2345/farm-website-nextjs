@@ -26,6 +26,8 @@ const VarietyDetails = ({ params }) => {
             </button>
             <span className=' text-gray-300'>/</span>
             <span className=' text-gray-500'>Fresh Fruits</span>
+            <span className=' text-gray-300'>/</span>
+            <span className=' text-red-500'>{variety.title}</span>
           </div>
 
         </div>
@@ -34,9 +36,10 @@ const VarietyDetails = ({ params }) => {
       </div>
 
       <div className='max-w-7xl mx-auto px-4'>
-       <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8'>
+
           {/* main image here */}
-          <div className="lg:col-span-6 flex justify-center">
+          <div className="lg:col-span-6 flex flex-col items-center">
             <div className="relative w-full max-w-[550px] h-[250px] sm:h-[350px] lg:h-[400px]">
               <Image
                 src={clickedApple}
@@ -44,14 +47,41 @@ const VarietyDetails = ({ params }) => {
                 fill
                 className="object-cover rounded-xl"
               />
-            <div className='absolute top-4 left-4 flex flex-col gap-2 z-10"'>
-              <div>
-              <span className='bg-red-600 text-white py-1 px-6  text-sm font-medium rounded-xl'>{variety.badge}</span>
+
+              <div className='absolute top-4 left-4 flex flex-col gap-2 z-10'>
+                <div>
+                  <span className='bg-red-600 text-white py-1 px-6  text-sm font-medium rounded-xl'>{variety.badge}</span>
+                </div>
+                <span className='bg-blue-600 text-white py-1 px-6 text-sm font-medium rounded-xl'>{variety.title.split(" ")[1]}</span>
               </div>
-              <span className='bg-blue-600 text-white py-1 px-6 text-sm font-medium rounded-xl'>{variety.title}</span>
             </div>
+            <div className='mt-4 flex gap-3 flex-wrap justify-center'>
+              {
+              variety.images?.map((img, index) => (
+                <div
+                  key={index}
+                  className={`relative w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden border-2 cursor-pointer 
+                     ${clickedApple === img ? "border-red-500" : "border-transparent"}`}
+                  onClick={() => setClickedApple(img)}
+                >
+                  <Image
+                    src={img}
+                    alt={`Thumbnail ${index + 1}`}
+                    fill
+                    className='object-cover hover:opacity-80 transition'
+                  />
+                </div>
+              ))
+              }
+
+
+
+
             </div>
           </div>
+
+
+
           {/* images ends here */}
 
           {/* right content starts here */}
@@ -100,11 +130,11 @@ const VarietyDetails = ({ params }) => {
               <div className='flex items-center gap-5'>
                 <div className='flex items-center border mt-3 border-gray-300 bg-white rounded-xl shadow'>
                   <button className='p-3 hover:bg-gray-50 transition-colors text-gray-700'>
-                    <Minus/>
+                    <Minus />
                   </button>
                   <span className='px-4 py-3 border-x border-gray-300 min-w-[60px] text-center text-gray-900 font-semibold"'>1</span>
                   <button className='p-3 hover:bg-gray-50 transition-colors text-gray-700 d'>
-                    <Plus/>
+                    <Plus />
                   </button>
                 </div>
                 <div className='font-bold text-xl mt-2'>
@@ -113,9 +143,9 @@ const VarietyDetails = ({ params }) => {
               </div>
               <div className='flex flex-col sm:flex-row gap-4 '>
                 <button className='flex-1 flex justify-center gap-2 font-semibold border py-4 px-6 rounded-xl bg-red-700 text-white'>
-                  <ShoppingCart className='w-5 h-5'/>
+                  <ShoppingCart className='w-5 h-5' />
                   Add to cart
-                  </button>
+                </button>
                 <button className='flex-1  gap-2 font-semibold border py-4 px-6 rounded-xl bg-gray-900 text-white'>
                   Buy Now
                 </button>
@@ -124,27 +154,27 @@ const VarietyDetails = ({ params }) => {
 
               <div className='grid grid-cols-2 gap-4 mt-8'>
                 <div className='flex items-center gap-2'>
-                  <Truck className='w-5 h-5 text-green-600'/>
+                  <Truck className='w-5 h-5 text-green-600' />
                   <span className='text-sm text-gray-600'>Best Prices</span>
                 </div>
 
                 <div className='flex items-center gap-2'>
-                  <Shield className='w-5 h-5 text-blue-600'/>
+                  <Shield className='w-5 h-5 text-blue-600' />
                   <span className='text-sm text-gray-600'>Quality guarantee</span>
                 </div>
 
                 <div className='flex items-center gap-2'>
-                  <Leaf className='w-5 h-5 text-green-600'/>
+                  <Leaf className='w-5 h-5 text-green-600' />
                   <span className='text-sm text-gray-600'>100% Naturally grown</span>
                 </div>
 
                 <div className='flex items-center gap-2'>
-                  <Award className='w-5 h-5 text-purple-600'/>
+                  <Award className='w-5 h-5 text-purple-600' />
                   <span className='text-sm text-gray-600'>Award winning</span>
                 </div>
 
 
-                
+
 
 
               </div>
