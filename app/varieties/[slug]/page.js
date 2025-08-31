@@ -1,7 +1,7 @@
 "use client"
 
 import { varieties } from '@/lib/data/varieties'
-import { ArrowLeft, ArrowRight, Award, CircleQuestionMark, Leaf, Minus, Plus, Shield, ShoppingCart, Truck } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Award, CheckCircle, CircleQuestionMark, Leaf, Minus, Plus, Shield, ShoppingCart, Truck } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
@@ -198,8 +198,8 @@ const VarietyDetails = ({ params }) => {
                 <button
                   onClick={() => setSwitchTap('nutrition')}
                   className={`py-4 px-1 text-sm lg:text-base font-medium border-b-2 transition-colors whitespace-nowrap ${switchTap === "nutrition"
-                      ? 'border-red-600 text-red-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                    ? 'border-red-600 text-red-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
                     }`}
                 >
                   Nutrition
@@ -207,8 +207,8 @@ const VarietyDetails = ({ params }) => {
                 <button
                   onClick={() => setSwitchTap('details')}
                   className={`py-4 px-1 text-sm lg:text-base font-medium border-b-2 transition-colors whitespace-nowrap ${switchTap === "details"
-                      ? 'border-red-600 text-red-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                    ? 'border-red-600 text-red-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
                     }`}
                 >
                   Details
@@ -217,6 +217,32 @@ const VarietyDetails = ({ params }) => {
             </div>
           </div>
         </div>
+
+        <div className='mt-6 space-y-6 lg:space-y-8'>
+          <h2 className='font-bold text-2xl mb-4 text-gray-800'>Product Details</h2>
+          <p className='text-gray-600 text-medium leading-relaxed space-y-4 mb-6'>{variety.longDescription}</p>
+        </div>
+
+        <div>
+          <h4 className='font-bold text-xl text-gray-800 mb-4'>Key Highlights</h4>
+          <ul className='space-y-2'>
+            {
+              variety.highlights.map((point,index) => (
+                <li key={index} className='text-gray-600 flex items-start gap-2 space-y-2 text-medium'>
+                  <CheckCircle className='text-green-600 w-5 h-5'/>
+                  <span>{point}</span>
+
+                </li>
+
+
+
+              ))
+              
+            }
+
+          </ul>
+        </div>
+
 
       </div>
 

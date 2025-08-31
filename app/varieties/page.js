@@ -6,6 +6,8 @@ import { varieties } from "@/lib/data/varieties";
 
 const Varieties = () => {
 
+    
+
 
     return (
         <div className='relative top-21 bg-gradient-to-b from-green-50  to-white min-h-screen'>
@@ -21,9 +23,9 @@ const Varieties = () => {
                     to your doorstep with guaranteed freshness and exceptional taste.
                 </p>
             </div>
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center sm:mb-12 px-6">
+            <div className="max-w-7xl mx-auto flex flex-col  sm:flex-row justify-between items-center sm:mb-12 px-6 ">
                 <p className='text-gray-500 '>Showing
-                    <span className='text-black font-semibold mx-1'>5</span>
+                    <span className='text-black font-semibold mx-1'>3</span>
                     Varieties
                 </p>
                 <div className='relative'>
