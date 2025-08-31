@@ -219,29 +219,99 @@ const VarietyDetails = ({ params }) => {
         </div>
 
         <div className='mt-6 space-y-6 lg:space-y-8'>
-          <h2 className='font-bold text-2xl mb-4 text-gray-800'>Product Details</h2>
-          <p className='text-gray-600 text-medium leading-relaxed space-y-4 mb-6'>{variety.longDescription}</p>
-        </div>
+          {switchTap === "description" && (
+            <div>
+              <h2 className='font-bold text-2xl mb-4 text-gray-800'>Product Details</h2>
+              <p className='text-gray-600 text-medium leading-relaxed space-y-4 mb-6'>{variety.longDescription}</p>
 
-        <div>
-          <h4 className='font-bold text-xl text-gray-800 mb-4'>Key Highlights</h4>
-          <ul className='space-y-2'>
-            {
-              variety.highlights.map((point,index) => (
-                <li key={index} className='text-gray-600 flex items-start gap-2 space-y-2 text-medium'>
-                  <CheckCircle className='text-green-600 w-5 h-5'/>
-                  <span>{point}</span>
+              <div>
+                <h4 className='font-bold text-xl text-gray-800 mb-4'>Key Highlights</h4>
+                <ul className='space-y-2'>
+                  {
+                    variety.highlights.map((point, index) => (
+                      <li key={index} className='text-gray-600 flex items-start gap-4 space-y-2 text-medium'>
+                        <CheckCircle className='text-green-600 w-5 h-5' />
+                        <span>{point}</span>
 
-                </li>
+                      </li>
+                    ))}
+
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {
+            switchTap === "nutrition" && (
+              <div>
+                <h1 className='text-2xl font-bold text-gray-800 mb-6'>Nutritional Information</h1>
+                <div className='bg-white border border-gray-200 rounded-xl overflow-hidden'>
+                  <div className='bg-gray-50 px-6 py-4 border-b border-gray-200'>
+                    <h4 className='font-semibold text-gray-800'>Nutrition Facts (per 100g)</h4>
+                  </div>
+
+                  <div className='divide-y divide-gray-100'>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Calories</dt>
+                      <dd className='text-gray-600' >{variety.calories}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>
+                        Carbohydates</dt>
+                      <dd className='text-gray-600' >{variety.carbohydates}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Calories</dt>
+                      <dd className='text-gray-600' >{variety.calories}</dd>
+                    </div>
+                  </div>
 
 
+                  </div>
+                </div>
+            )
+          }
 
-              ))
+
+          {
+            switchTap === "details" && (
+              <div>
+                <h1 className='text-2xl font-bold text-gray-800 mb-6'>Product Specifications</h1>
+                <div className='bg-white border border-gray-200 rounded-xl overflow-hidden'>
+                  <div className='bg-gray-50 px-6 py-4 border-b border-gray-200'>
+                    <h4 className='font-semibold text-gray-800'>Product Information</h4>
+                  </div>
+                  <div className='divide-y divide-gray-100'>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Origin</dt>
+                      <dd className='text-gray-600' >{variety.calories}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>
+                        Variety</dt>
+                      <dd className='text-gray-600' >{variety.carbohydates}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Season</dt>
+                      <dd className='text-gray-600' >{variety.calories}</dd>
+                    </div>
+
+                     <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Shelf Life</dt>
+                      <dd className='text-gray-600' >{variety.calories}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Storage</dt>
+                      <dd className='text-gray-600' >{variety.calories}</dd>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+
               
-            }
-
-          </ul>
-        </div>
+            )
+          }
+              </div>
 
 
       </div>

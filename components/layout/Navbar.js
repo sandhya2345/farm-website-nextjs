@@ -19,7 +19,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="fixed w-full top-0 z-50 transition-all duration-500 bg-white/60 backdrop-blur-sm">
+        <nav className="fixed w-full top-0 z-50 transition-all duration-500 bg-white/90 backdrop-blur-sm">
             <div className='max-w-7xl mx-auto flex items-center justify-between px-6 py-4'>
                 <div className='flex items-center space-x-2'>
                     {/* Logo starts here */}
