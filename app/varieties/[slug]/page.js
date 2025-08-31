@@ -12,6 +12,7 @@ const VarietyDetails = ({ params }) => {
 
 
   const [clickedApple, setClickedApple] = useState(variety.image)
+  const [switchTap, setSwitchTap] = useState("description")
 
 
   return (
@@ -40,7 +41,7 @@ const VarietyDetails = ({ params }) => {
 
           {/* main image here */}
           <div className="lg:col-span-6 flex flex-col items-center">
-            <div className="relative w-full max-w-[550px] h-[250px] sm:h-[350px] lg:h-[400px]">
+            <div className="relative w-full max-w-[550px] h-[250px] sm:h-[350px] lg:h-[450px]">
               <Image
                 src={clickedApple}
                 alt="Apple Image"
@@ -55,26 +56,28 @@ const VarietyDetails = ({ params }) => {
                 <span className='bg-blue-600 text-white py-1 px-6 text-sm font-medium rounded-xl'>{variety.title.split(" ")[1]}</span>
               </div>
             </div>
+
+
+
+
             <div className='mt-4 flex gap-3 flex-wrap justify-center'>
               {
-              variety.images?.map((img, index) => (
-                <div
-                  key={index}
-                  className={`relative w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden border-2 cursor-pointer 
-                     ${clickedApple === img ? "border-red-500" : "border-transparent"}`}
-                  onClick={() => setClickedApple(img)}
-                >
-                  <Image
-                    src={img}
-                    alt={`Thumbnail ${index + 1}`}
-                    fill
-                    className='object-cover hover:opacity-80 transition'
-                  />
-                </div>
-              ))
+                variety.images?.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`relative w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden border-2 cursor-pointer 
+                    ${clickedApple === img ? "border-red-500" : "border-transparent"}`}
+                    onClick={() => setClickedApple(img)}
+                  >
+                    <Image
+                      src={img}
+                      alt={`Thumbnail ${index + 1}`}
+                      fill
+                      className='object-cover hover:opacity-80 transition'
+                    />
+                  </div>
+                ))
               }
-
-
 
 
             </div>
@@ -86,7 +89,7 @@ const VarietyDetails = ({ params }) => {
 
           {/* right content starts here */}
 
-          <div className='lg:col-span-6'>
+          <div className='lg:col-span-6 overflow-auto'>
             <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 leading-tight'>{variety.title}</h1>
             <p className='text-gray-500 text-lg font-medium mb-4'>Premium Quality</p>
             <p className='text-3xl font-semibold mb-4'>₹{variety.price}</p>
@@ -120,9 +123,6 @@ const VarietyDetails = ({ params }) => {
             <div className='mb-4 flex items-center justify-between'>
               <span className='text-sm text-gray-600'>🎁 Get 5% OFF on orders above 5kg</span>
             </div>
-
-
-
 
 
             <div className='space-y-6 '>
@@ -172,20 +172,50 @@ const VarietyDetails = ({ params }) => {
                   <Award className='w-5 h-5 text-purple-600' />
                   <span className='text-sm text-gray-600'>Award winning</span>
                 </div>
-
-
-
-
-
               </div>
 
 
             </div>
           </div>
 
+        </div>
 
+        {/* right content finished here */}
 
+        <div className='mt-12'>
+          <div className='border-b border-gray-200 '>
+            <div className='overflow-x-auto'>
 
+              <nav className='flex space-x-6 lg:space-x-8 min-w-max px-1'>
+                <button onClick={() => setSwitchTap('description')}
+                  className={`py-4 px-1 text-sm lg:text-base font-medium border-b-2 transition-colors whitespace-nowrap
+                 ${switchTap === "description"
+                      ? 'border-red-600 text-red-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}>
+                  Description
+                </button>
+                <button
+                  onClick={() => setSwitchTap('nutrition')}
+                  className={`py-4 px-1 text-sm lg:text-base font-medium border-b-2 transition-colors whitespace-nowrap ${switchTap === "nutrition"
+                      ? 'border-red-600 text-red-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}
+                >
+                  Nutrition
+                </button>
+                <button
+                  onClick={() => setSwitchTap('details')}
+                  className={`py-4 px-1 text-sm lg:text-base font-medium border-b-2 transition-colors whitespace-nowrap ${switchTap === "details"
+                      ? 'border-red-600 text-red-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                    }`}
+                >
+                  Details
+                </button>
+              </nav>
+            </div>
+          </div>
         </div>
 
       </div>
