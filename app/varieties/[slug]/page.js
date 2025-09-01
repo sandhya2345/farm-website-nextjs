@@ -1,6 +1,7 @@
 "use client"
 
 import { varieties } from '@/lib/data/varieties'
+import Recommendation from "@/components/ui/Recommendation/page";
 import { ArrowLeft, ArrowRight, Award, CheckCircle, CircleQuestionMark, Leaf, Minus, Plus, Shield, ShoppingCart, Truck } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState } from 'react'
@@ -261,14 +262,34 @@ const VarietyDetails = ({ params }) => {
                       <dd className='text-gray-600' >{variety.carbohydates}</dd>
                     </div>
                     <div className='px-6 py-4 flex justify-between'>
-                      <dt className='text-gray-600'>Calories</dt>
-                      <dd className='text-gray-600' >{variety.calories}</dd>
+                      <dt className='text-gray-600'>Fiber</dt>
+                      <dd className='text-gray-600' >{variety.fiber}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Sugar</dt>
+                      <dd className='text-gray-600' >{variety.sugar}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Vitamin C</dt>
+                      <dd className='text-gray-600' >{variety.vitamin_c}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Potassium</dt>
+                      <dd className='text-gray-600' >{variety.potassium}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Protein</dt>
+                      <dd className='text-gray-600' >{variety.protein}</dd>
+                    </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Fat</dt>
+                      <dd className='text-gray-600' >{variety.fat}</dd>
                     </div>
                   </div>
 
 
-                  </div>
                 </div>
+              </div>
             )
           }
 
@@ -296,7 +317,7 @@ const VarietyDetails = ({ params }) => {
                       <dd className='text-gray-600' >{variety.calories}</dd>
                     </div>
 
-                     <div className='px-6 py-4 flex justify-between'>
+                    <div className='px-6 py-4 flex justify-between'>
                       <dt className='text-gray-600'>Shelf Life</dt>
                       <dd className='text-gray-600' >{variety.calories}</dd>
                     </div>
@@ -304,14 +325,20 @@ const VarietyDetails = ({ params }) => {
                       <dt className='text-gray-600'>Storage</dt>
                       <dd className='text-gray-600' >{variety.calories}</dd>
                     </div>
+                    <div className='px-6 py-4 flex justify-between'>
+                      <dt className='text-gray-600'>Storage</dt>
+                      <dd className='text-gray-600' >{variety.calories}</dd>
+                    </div>
                   </div>
-                  </div>
+                </div>
               </div>
 
-              
+
             )
           }
-              </div>
+        </div>
+
+        <Recommendation/>
 
 
       </div>
