@@ -19,7 +19,7 @@ const Recommend = () => {
                     </p>
                 </div>
 
-                <div className='hidden lg:flex items-center gap-3'>
+                <div className='hidden lg:flex items-center gap-3 mb-8'>
                     <Link href='/varieties' className='text-sm font-medium text-red-700 hover:text-red-800 transition-colors flex items-center'>
                         View all varieties
                         <ArrowRight className='w-4 h-4' />
@@ -29,18 +29,19 @@ const Recommend = () => {
 
             </div>
 
+
             <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                 {varieties.map((variety, index) => (
                     <div
                         key={index}
-                        className='bg-white rounded-xl shadow-sm border-gray-200 hover:shadow-md transition'
+                        className='bg-white rounded-xl shadow-sm border-gray-200 hover:shadow-md transition group'
                     >
-                        <div className="relative w-full h-68">
+                        <div className="relative overflow-hidden w-full h-68 ">
                             <Image
                                 src={variety.image}
                                 alt={variety.title}
                                 fill
-                                className="rounded-t-2xl object-cover"
+                                className="rounded-t-2xl object-cover transition-transform duration-300 group-hover:scale-105 "
                             />
                             <span className='absolute top-2 left-2 bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded-full'>
                                 {variety.badge}
@@ -70,8 +71,6 @@ const Recommend = () => {
 
 
             </div>
-
-
         </div>
     )
 }
