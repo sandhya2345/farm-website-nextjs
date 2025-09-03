@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Apple, Search, User, ShoppingBag, X, Menu } from "lucide-react";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const Navbar = () => {
 
@@ -23,8 +24,15 @@ const Navbar = () => {
             <div className='max-w-7xl mx-auto flex items-center justify-between px-6 py-4'>
                 <div className='flex items-center space-x-2'>
                     {/* Logo starts here */}
-                    <div className='bg-red-600 p-2 space-x-2 rounded-2xl'>
-                        <Apple className='text-white ' />
+                    <div className=' space-x-2 '>
+                        {/* <Apple className='text-white ' /> */}
+                        <Image
+                            src="/logo.png"   
+                            alt="Logo"
+                            width={52}       
+                            height={42}       
+                            className="rounded-full" 
+                        />
                     </div>
 
                     <div className='flex flex-col leading-tight'>
@@ -92,15 +100,15 @@ const Navbar = () => {
                     <div className='md:hidden bg-white/90 backdrop-blur-md border-t border-gray-200 shadow-md'>
                         <ul className='flex flex-col items-center space-y-6 py-6 text-gray-700 font-medium'>
                             {links.map((link) => {
-                                
+
                                 const isClicked = pathname === link.href;
                                 return (
                                     <li key={link.href}>
                                         <Link
                                             href={link.href}
                                             className={`transition-colors ${isClicked
-                                                    ? "text-red-600 font-semibold"
-                                                    : "hover:text-red-600"
+                                                ? "text-red-600 font-semibold"
+                                                : "hover:text-red-600"
                                                 }`}
                                             onClick={() => setMenuOn(false)}
                                         >
