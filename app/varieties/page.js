@@ -1,13 +1,26 @@
+"use client"
+
 import { ChevronDown } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import VarietyCard from "@/components/ui/Cards/VarietyCard";
 import { varieties } from "@/lib/data/varieties";
 
 
 const Varieties = () => {
+    const [varieties, setVarieties] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    
+    useEffect(() => {
+        fetch("/api/varieties")
+            .then((res) => res.json())
+            .then((data) => {
+                setVarieties(data);
+                setLoading(false);
+            })
+            .catch((err) => console.error(err));
+    }, []);
 
+    if (loading) return <p className="text-center py-20">Check... is this working???</p>;
 
     return (
         <div className='relative top-21 bg-gradient-to-b from-green-50  to-white min-h-screen'>
@@ -53,7 +66,7 @@ const Varieties = () => {
                 </div>
             </div>
 
-            
+
 
         </div>
     )

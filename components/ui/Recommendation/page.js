@@ -1,10 +1,18 @@
 import { Apple, ArrowRight, ShoppingBag, ShoppingCart } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { varieties } from "@/lib/data/varieties";
 import Image from 'next/image';
 
 const Recommend = () => {
+    const [varieties, setVarieties] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/varieties')
+            .then(res => res.json())
+            .then(data => setVarieties(data));
+    }, []);
+
+    
     return (
         <div className='bg-white mt-16'>
             <div className='flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4'>

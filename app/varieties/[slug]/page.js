@@ -4,16 +4,36 @@ import { varieties } from '@/lib/data/varieties'
 import Recommendation from "@/components/ui/Recommendation/page";
 import { ArrowLeft, ArrowRight, Award, CheckCircle, CircleQuestionMark, Leaf, Minus, Plus, Shield, ShoppingCart, Truck } from 'lucide-react'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { notFound } from 'next/navigation';
 
-const VarietyDetails = ({ params }) => {
-  const openParams = React.use(params);
-  const { slug } = openParams;
-  const variety = varieties.find(v => v.slug === slug)
+const VarietyDetails = () => {
+  const params = useParams();
+  const { slug } = params;
 
+  const [variety, setVariety] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  const [clickedApple, setClickedApple] = useState("");
+  const [switchTap, setSwitchTap] = useState("description");
 
-  const [clickedApple, setClickedApple] = useState(variety.image)
-  const [switchTap, setSwitchTap] = useState("description")
+  useEffect(() => {
+    fetch(`/api/varieties/${slug}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setVariety(data);
+        setClickedApple(data.image);
+        setLoading(false);
+      })
+      .catch((err) => console.error(err));
+  }, [slug]);
+
+  if (loading) return <p className="text-center py-20">Wait.....</p>;
+  if (!variety){
+        return notFound()
+
+    }
 
 
   return (
@@ -338,7 +358,7 @@ const VarietyDetails = ({ params }) => {
           }
         </div>
 
-        <Recommendation/>
+        <Recommendation />
 
 
       </div>
