@@ -3,7 +3,6 @@
 import { ChevronDown } from 'lucide-react'
 import React, { useEffect, useState } from "react";
 import VarietyCard from "@/components/ui/Cards/VarietyCard";
-import { varieties } from "@/lib/data/varieties";
 
 
 const Varieties = () => {

@@ -90,10 +90,10 @@ const Navbar = () => {
                 <div className='hidden md:flex items-center space-x-6 text-gray-600'>
                     <Search className='w-5 h-5' />
                     <User className='w-5 h-5' />
-                    <div className="relative">
-                        <ShoppingBag className="w-5 h-5" />
+                    <div className='relative'>
+                        <ShoppingBag className='w-5 h-5' />
                         {cartCount > 0 && (
-                            <span className="absolute -top-4 -right-4 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                            <span className='absolute -top-4 -right-4 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full'>
                                 {cartCount}
                             </span>
                         )}

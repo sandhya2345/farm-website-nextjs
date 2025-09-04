@@ -1,16 +1,17 @@
 
 "use client"
-import Image from "next/image";
 
 import { Leaf, ArrowDown, FacebookIcon, YoutubeIcon, X, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Instagram, Facebook, Youtube, Mail, MessageCircle } from "lucide-react";
+import { useState } from "react";
+
 
 export default function Home() {
+  
   return (
 
     <main className="w-full">
-
 
       {/* // Main hero section */}
 
@@ -72,14 +73,16 @@ export default function Home() {
 
 
           <div className="grid gap-6 md:grid-cols-2">
+
             {/* card 1 */}
+         
             <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
               <div className="relative">
                 <img
                   src="/images/Royal.jpg"
                   alt="Royal Delicious Apples"
                   className="w-full h-72 object-cover"
-                />
+                  />
                 <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
                   Premium
                 </span>
@@ -108,8 +111,10 @@ export default function Home() {
                 </button>
               </div>
             </div>
+           
 
             {/* card 2 */}
+
 
             <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
               <div className="relative">
@@ -149,11 +154,13 @@ export default function Home() {
           </div>
 
           
+            <Link href="/varieties">
           <div className="max-w-xl mt-12 mx-auto flex items-center justify-center">
             <button className="mt-4 w-1/2  bg-gray-900 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               <span>View all Apple Varieties</span>
             </button>
           </div>
+            </Link>
         </div>
       </section>
 
