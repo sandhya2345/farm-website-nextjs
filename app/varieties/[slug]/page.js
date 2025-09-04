@@ -7,6 +7,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { notFound } from 'next/navigation';
 import VarietyTabs from "@/components/ui/Variety/page";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const VarietyDetails = () => {
   const params = useParams();
@@ -16,6 +18,7 @@ const VarietyDetails = () => {
   const [loading, setLoading] = useState(true);
   const [selectedWeight, setSelectedWeight] = useState("5kg")
   const [quantity, setQuantity] = useState(1);
+  const notify = () => toast("Wow so easy!");
 
   const [clickedApple, setClickedApple] = useState("");
   useEffect(() => {
@@ -38,6 +41,36 @@ const VarietyDetails = () => {
 
   const getPrice = () => (selectedWeight === "5kg" ? variety.price : variety.price * 2);
   const totalPrice = getPrice() * quantity
+
+
+
+  const addToCart = async () => {
+    try {
+      const response = await fetch("/api/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          slug: variety.slug,
+          quantity: quantity,
+          weight: selectedWeight,
+        }),
+
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Apples are added to the cart!");
+      } else {
+        toast.error("Failed to add to cart: " + data.error);
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong");
+    }
+  };
 
 
   return (
@@ -171,14 +204,14 @@ const VarietyDetails = () => {
               <div className='flex items-center gap-5'>
                 <div className='flex items-center border mt-3 border-gray-300 bg-white rounded-xl shadow'>
                   <button
-                  onClick={() => setQuantity(prev => Math.max(1, prev-1))}
-                   className='p-3 hover:bg-gray-50 transition-colors text-gray-700'>
+                    onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
+                    className='p-3 hover:bg-gray-50 transition-colors text-gray-700'>
                     <Minus />
                   </button>
                   <span className='px-4 py-3 border-x border-gray-300 min-w-[60px] text-center text-gray-900 font-semibold"'>{quantity}</span>
-                  <button 
-                  onClick={() => setQuantity(prev => prev + 1)}
-                  className='p-3 hover:bg-gray-50 transition-colors text-gray-700 d'>
+                  <button
+                    onClick={() => setQuantity(prev => prev + 1)}
+                    className='p-3 hover:bg-gray-50 transition-colors text-gray-700 d'>
                     <Plus />
                   </button>
                 </div>
@@ -187,13 +220,16 @@ const VarietyDetails = () => {
                 </div>
               </div>
               <div className='flex flex-col sm:flex-row gap-4 '>
-                <button className='flex-1 flex justify-center gap-2 font-semibold border py-4 px-6 rounded-xl bg-red-700 text-white'>
+                <button
+                  onClick={addToCart}
+                  className='flex-1 flex justify-center gap-2 font-semibold border py-4 px-6 rounded-xl bg-red-700 text-white'>
                   <ShoppingCart className='w-5 h-5' />
                   Add to cart
                 </button>
                 <button className='flex-1  gap-2 font-semibold border py-4 px-6 rounded-xl bg-gray-900 text-white'>
                   Buy Now
                 </button>
+                  <ToastContainer position="top-right" />
 
               </div>
 

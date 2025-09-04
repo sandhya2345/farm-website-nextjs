@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Apple, Search, User, ShoppingBag, X, Menu } from "lucide-react";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -10,6 +10,7 @@ const Navbar = () => {
 
     const pathname = usePathname();
     const [menuOn, setMenuOn] = useState(false)
+    const [cartCount, setCartCount] = useState(0);
 
     const links = [
         { href: "/", label: "Home" },
@@ -17,6 +18,14 @@ const Navbar = () => {
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
     ];
+
+    useEffect(() => {
+
+        fetch("/api/cart")
+            .then(res => res.json())
+            .then(data => setCartCount(data.length))
+            .catch(err => console.error(err));
+    }, []);
 
 
     return (
@@ -27,11 +36,11 @@ const Navbar = () => {
                     <div className=' space-x-2 '>
                         {/* <Apple className='text-white ' /> */}
                         <Image
-                            src="/logo.png"   
+                            src="/logo.png"
                             alt="Logo"
-                            width={52}       
-                            height={42}       
-                            className="rounded-full" 
+                            width={52}
+                            height={42}
+                            className="rounded-full"
                         />
                     </div>
 
@@ -81,7 +90,14 @@ const Navbar = () => {
                 <div className='hidden md:flex items-center space-x-6 text-gray-600'>
                     <Search className='w-5 h-5' />
                     <User className='w-5 h-5' />
-                    <ShoppingBag className='w-5 h-5' />
+                    <div className="relative">
+                        <ShoppingBag className="w-5 h-5" />
+                        {cartCount > 0 && (
+                            <span className="absolute -top-4 -right-4 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                                {cartCount}
+                            </span>
+                        )}
+                    </div>
 
                 </div>
 
