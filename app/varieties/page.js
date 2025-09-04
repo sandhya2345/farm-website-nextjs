@@ -20,7 +20,7 @@ const Varieties = () => {
             .catch((err) => console.error(err));
     }, []);
 
-    if (loading) return <p className="text-center py-20">Check... is this working???</p>;
+    if (loading) return <p className="text-center py-20">Loading...</p>;
 
     return (
         <div className='relative top-21 bg-gradient-to-b from-green-50  to-white min-h-screen'>

@@ -32,7 +32,7 @@ const VarietyTabs = () => {
 
 
     return (
-        <div>
+        <div className='max-w-7xl mx-auto px-4'>
             <div className='mt-12'>
                 <div className='border-b border-gray-200 '>
                     <div className='overflow-x-auto'>

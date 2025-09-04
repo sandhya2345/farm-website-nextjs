@@ -14,6 +14,8 @@ const VarietyDetails = () => {
 
   const [variety, setVariety] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectedWeight, setSelectedWeight] = useState("5kg")
+  const [quantity, setQuantity] = useState(1);
 
   const [clickedApple, setClickedApple] = useState("");
   useEffect(() => {
@@ -27,11 +29,15 @@ const VarietyDetails = () => {
       .catch((err) => console.error(err));
   }, [slug]);
 
-  if (loading) return <p className="text-center py-20">Wait.....</p>;
+  if (loading) return <p className="text-center py-20">Loading.....</p>;
   if (!variety) {
     return notFound()
 
   }
+
+
+  const getPrice = () => (selectedWeight === "5kg" ? variety.price : variety.price * 2);
+  const totalPrice = getPrice() * quantity
 
 
   return (
@@ -102,14 +108,12 @@ const VarietyDetails = () => {
 
 
 
-          {/* images ends here */}
-
           {/* right content starts here */}
 
           <div className='lg:col-span-6 overflow-auto'>
             <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 leading-tight'>{variety.title}</h1>
             <p className='text-gray-500 text-lg font-medium mb-4'>Premium Quality</p>
-            <p className='text-3xl font-semibold mb-4'>₹{variety.price}</p>
+            <p className='text-3xl font-semibold mb-4'>₹{totalPrice}</p>
             <p className='text-gray-600 mb-4'>{variety.longDescription}</p>
             <div className='mb-4'>
               <label className='flex gap-1 font-semibold text-gray-800'>
@@ -118,23 +122,43 @@ const VarietyDetails = () => {
               </label>
             </div>
             <div className='grid grid-cols-2 gap-3 mb-4'>
-              <button className='relative p-3 sm:p-6 rounded-xl border text-center transition-all duration-200 border-red-600 bg-red-50 shadow-md'>
+              <button
+                onClick={() => setSelectedWeight("5kg")}
+                className={`relative p-3 sm:p-6 rounded-xl border text-center transition-all duration-200 
+                  ${selectedWeight === "5kg" ? "border-red-600 bg-red-50 shadow-md" : "border-gray-200 bg-white hover:border-gray-300"}`}
+              >
+
                 <div className='font-semibold text-red-600 text-lg'>
                   5 KG Box
                 </div>
-                <div>
-                  ₹ 1000
-                </div>
-                <span className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-medium">Popular</span>
+                <div>₹ {variety.price}</div>
+                {
+                  selectedWeight === "5kg" && (
+
+                    <span className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-medium">Popular</span>
+                  )
+                }
               </button>
 
-              <button className='relative p-3 sm:p-4 rounded-xl border text-center transition-all duration-200 border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50'>
-                <div className='font-semibold text-green-600 text-lg'>
+              <button
+                onClick={() => setSelectedWeight("10kg")}
+                className={
+
+                  `relative p-3 sm:p-4 rounded-xl border text-center transition-all duration-200
+                 ${selectedWeight === "10kg" ? "border-red-600 bg-red-50 shadow-md" : "border-gray-200 bg-white hover:border-gray-300"}  
+                `}
+              >
+
+                <div className='font-semibold text-red-600 text-lg'>
                   10 KG Box
                 </div>
-                <div>
-                  ₹ 1000
-                </div>
+                <div>₹ {variety.price * 2}</div>
+                {selectedWeight === "10kg" && (
+                  <span className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-medium">
+                    Selected
+                  </span>
+                )}
+
               </button>
             </div>
             <div className='mb-4 flex items-center justify-between'>
@@ -146,16 +170,20 @@ const VarietyDetails = () => {
               <label className='font-semibold text-gray-900 mb-3'>Quantity</label>
               <div className='flex items-center gap-5'>
                 <div className='flex items-center border mt-3 border-gray-300 bg-white rounded-xl shadow'>
-                  <button className='p-3 hover:bg-gray-50 transition-colors text-gray-700'>
+                  <button
+                  onClick={() => setQuantity(prev => Math.max(1, prev-1))}
+                   className='p-3 hover:bg-gray-50 transition-colors text-gray-700'>
                     <Minus />
                   </button>
-                  <span className='px-4 py-3 border-x border-gray-300 min-w-[60px] text-center text-gray-900 font-semibold"'>1</span>
-                  <button className='p-3 hover:bg-gray-50 transition-colors text-gray-700 d'>
+                  <span className='px-4 py-3 border-x border-gray-300 min-w-[60px] text-center text-gray-900 font-semibold"'>{quantity}</span>
+                  <button 
+                  onClick={() => setQuantity(prev => prev + 1)}
+                  className='p-3 hover:bg-gray-50 transition-colors text-gray-700 d'>
                     <Plus />
                   </button>
                 </div>
                 <div className='font-bold text-xl mt-2'>
-                  Total: ₹1499
+                  Total: ₹ {totalPrice}
                 </div>
               </div>
               <div className='flex flex-col sm:flex-row gap-4 '>
@@ -198,14 +226,14 @@ const VarietyDetails = () => {
         </div>
 
 
-        <VarietyTabs/>
+        <VarietyTabs />
 
         <Recommendation />
 
 
       </div>
 
-    </div>
+    </div >
   )
 }
 

@@ -14,7 +14,7 @@ const Recommend = () => {
 
     
     return (
-        <div className='bg-white mt-16'>
+        <div className='bg-white mt-16 px-4'>
             <div className='flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4'>
                 <div>
                     <span className='inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-50 text-red-700 mb-3'>
