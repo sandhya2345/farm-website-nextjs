@@ -1,7 +1,9 @@
 "use client"
-import { ArrowLeft, CircleCheckBig, Lock, Minus, Plus, Star, X } from 'lucide-react'
+import { ArrowLeft, CircleCheckBig, Delete, Lock, Minus, Plus, Star, X } from 'lucide-react'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
@@ -35,8 +37,29 @@ const Cart = () => {
     );
   }
 
+  const removeCartItem = async (id) => {
+    try {
+
+      const res = await fetch(`/api/cart/${id}`, { method: "DELETE" });
+      const datum = await res.json();
+
+      if (datum.success) {
+        setCart(cart.filter(item => item._id !== id));
+        toast.success("Items are removed from the cart!");
+      }
+      else {
+        toast.error("Failed to remove the cart: " + datum.error);
+      }
+    }
+    catch (err) {
+      console.error("Delete fetch error:", err);
+    }
+  }
+
+
   return (
     <div className='min-h-screen py-20  bg-white'>
+         <ToastContainer position="top-right" />
       <div className='max-w-8xl mx-auto px-16 py-4  border-b border-gray-200 mb-8'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-3'>
@@ -112,14 +135,18 @@ const Cart = () => {
                             className='p-2 hover:bg-gray-50 transition-colors text-gray-700'>
                             <Minus />
                           </button>
-                          <span className='px-2 py-2 border-x border-gray-300 min-w-[40px] text-center text-gray-900 font-semibold"'>1</span>
+                          <span className='px-2 py-2 border-x border-gray-300 min-w-[40px] text-center text-gray-900 font-semibold"'>{item.quantity}</span>
                           <button
                             // onClick={() => setQuantity(prev => prev + 1)}
                             className='p-2 hover:bg-gray-50 transition-colors text-gray-700 d'>
                             <Plus />
                           </button>
                         </div>
-                        <X className='mx-3 mt-3 text-gray-600' />
+                        <X
+                          onClick={() => removeCartItem(item._id)}
+                          className='mx-3 mt-3 text-gray-600'
+                        />
+                         
 
                         {/* ends here quantity */}
                       </div>
@@ -131,6 +158,7 @@ const Cart = () => {
 
               </div>
             ))}
+         
 
         </div>
       </div>
