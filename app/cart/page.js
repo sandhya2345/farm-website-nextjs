@@ -9,8 +9,6 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
-
   useEffect(() => {
     const fetchCart = async () => {
       try {
@@ -57,9 +55,31 @@ const Cart = () => {
   }
 
 
+  const updateCartQuantity = async (id, updatedNum) => {
+    try {
+      const res = await fetch(`/api/cart/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ quantity: updatedNum }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setCart(cart.map(item => item._id === id ? { ...item, quantity: updatedNum } : item));
+        toast.success("Cart items are updated!!");
+      } else {
+        toast.error("Failed: " + data.error);
+      }
+    } catch (err) {
+      console.error("Update cart error:", err);
+    }
+  };
+
+
   return (
     <div className='min-h-screen py-20  bg-white'>
-         <ToastContainer position="top-right" />
+      <ToastContainer position="top-right" />
       <div className='max-w-8xl mx-auto px-16 py-4  border-b border-gray-200 mb-8'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-3'>
@@ -121,23 +141,23 @@ const Cart = () => {
 
                     <div className='text-right'>
                       <p className='text-2xl font-semibold'>₹ {item.price}</p>
-                      <p className='text-xl font-semibold'>₹ {item.price}</p>
+                      <p className='text-xl font-semibold'> ₹ {item.price * item.quantity}</p>
                       <p className='text-gray-600 text-sm'>Total for {item.quantity} box</p>
 
-                      {/* her start quantity button */}
+                      {/* here start quantity button */}
 
 
 
                       <div className="flex items-center mt-4">
                         <div className='flex items-center border mt-3 border-gray-300 bg-white rounded-xl shadow'>
                           <button
-                            // onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
+                            onClick={() => updateCartQuantity(item._id, item.quantity - 1)}
                             className='p-2 hover:bg-gray-50 transition-colors text-gray-700'>
                             <Minus />
                           </button>
                           <span className='px-2 py-2 border-x border-gray-300 min-w-[40px] text-center text-gray-900 font-semibold"'>{item.quantity}</span>
                           <button
-                            // onClick={() => setQuantity(prev => prev + 1)}
+                          onClick={() => updateCartQuantity(item._id, item.quantity + 1)}
                             className='p-2 hover:bg-gray-50 transition-colors text-gray-700 d'>
                             <Plus />
                           </button>
@@ -146,7 +166,7 @@ const Cart = () => {
                           onClick={() => removeCartItem(item._id)}
                           className='mx-3 mt-3 text-gray-600'
                         />
-                         
+
 
                         {/* ends here quantity */}
                       </div>
@@ -158,7 +178,7 @@ const Cart = () => {
 
               </div>
             ))}
-         
+
 
         </div>
       </div>

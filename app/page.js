@@ -75,7 +75,8 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2">
 
             {/* card 1 */}
-         
+
+         <Link href={`/varieties/royal-delicious`}>
             <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
               <div className="relative">
                 <img
@@ -111,11 +112,12 @@ export default function Home() {
                 </button>
               </div>
             </div>
+          </Link>
            
 
             {/* card 2 */}
 
-
+           <Link href={`/varieties/royal-delicious`}>
             <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
               <div className="relative">
                 <img
@@ -151,6 +153,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
+           </Link>
           </div>
 
           

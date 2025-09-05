@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Poppins } from "next/font/google";
 import Footer from "@/components/layout/Footer";
@@ -35,6 +37,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
 
         {children}
+          <ToastContainer position="top-right" />
         <Footer/>
       </body>
     </html>
