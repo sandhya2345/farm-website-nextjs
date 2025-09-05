@@ -80,7 +80,7 @@ const Cart = () => {
   return (
     <div className='min-h-screen py-20  bg-white'>
       <ToastContainer position="top-right" />
-      <div className='max-w-8xl mx-auto px-16 py-4  border-b border-gray-200 mb-8'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  border-b border-gray-200 mb-8'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-3'>
             <button>
@@ -100,7 +100,7 @@ const Cart = () => {
         </div>
       </div>
 
-      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 px-6'>
+      <div className='max-w-5xl sm:max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 px-6'>
         <div className='lg:col-span-7 space-y-6 '>
 
           {
@@ -108,7 +108,7 @@ const Cart = () => {
 
               <div
                 key={item._id || index}
-                className="bg-white border border-gray-200 rounded-2xl p-6 flex gap-6 items-start"
+                className='bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start'
               >
 
                 <Image
@@ -116,11 +116,12 @@ const Cart = () => {
                   width={200}
                   height={200}
                   alt="Picture of the author"
-                  className='rounded-2xl object-cover'
+                 className="rounded-3xl object-cover w-32 h-32 sm:w-32 sm:h-32 md:w-40 md:h-40 mx-auto sm:mx-0"
+
                 />
 
                 <div className='flex-1'>
-                  <div className='flex justify-between'>
+                 <div className='flex flex-col sm:flex-row justify-between w-full gap-4'>
                     <div>
                       <h3 className='font-semibold text-lg'>{item.title}</h3>
                       <p className='text-md text-gray-600'>{item.weight} Box</p>
@@ -139,7 +140,7 @@ const Cart = () => {
 
                     </div>
 
-                    <div className='text-right'>
+                     <div className='text-left sm:text-right'>
                       <p className='text-2xl font-semibold'>₹ {item.price}</p>
                       <p className='text-xl font-semibold'> ₹ {item.price * item.quantity}</p>
                       <p className='text-gray-600 text-sm'>Total for {item.quantity} box</p>
@@ -157,7 +158,7 @@ const Cart = () => {
                           </button>
                           <span className='px-2 py-2 border-x border-gray-300 min-w-[40px] text-center text-gray-900 font-semibold"'>{item.quantity}</span>
                           <button
-                          onClick={() => updateCartQuantity(item._id, item.quantity + 1)}
+                            onClick={() => updateCartQuantity(item._id, item.quantity + 1)}
                             className='p-2 hover:bg-gray-50 transition-colors text-gray-700 d'>
                             <Plus />
                           </button>
@@ -181,6 +182,8 @@ const Cart = () => {
 
 
         </div>
+
+
       </div>
     </div>
   )
