@@ -18,7 +18,7 @@ const VarietyDetails = () => {
   const [loading, setLoading] = useState(true);
   const [selectedWeight, setSelectedWeight] = useState("5kg")
   const [quantity, setQuantity] = useState(1);
-  const notify = () => toast("Wow so easy!");
+
 
   const [clickedApple, setClickedApple] = useState("");
   useEffect(() => {
@@ -53,8 +53,11 @@ const VarietyDetails = () => {
         },
         body: JSON.stringify({
           slug: variety.slug,
-          quantity: quantity,
+          title: variety.title,
+          image: variety.image || variety.images?.[0],
+          price: getPrice(),
           weight: selectedWeight,
+          quantity: quantity,
         }),
 
       });
@@ -229,7 +232,7 @@ const VarietyDetails = () => {
                 <button className='flex-1  gap-2 font-semibold border py-4 px-6 rounded-xl bg-gray-900 text-white'>
                   Buy Now
                 </button>
-                  <ToastContainer position="top-right" />
+                <ToastContainer position="top-right" />
 
               </div>
 

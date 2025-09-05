@@ -14,13 +14,24 @@ export async function POST(req) {
   const db = client.db("appletales");
   const body = await req.json();
 
-  const { slug, quantity } = body;
+  const { slug, title, image, price, weight, quantity } = body;
 
   if (!slug || !quantity) {
-    return NextResponse.json({ error: "slug and quantity required" }, { status: 400 });
+    return NextResponse.json(
+      { error: "slug and quantity required" },
+      { status: 400 }
+    );
   }
 
-  const result = await db.collection("cart").insertOne({ slug, quantity });
+  const result = await db.collection("cart").insertOne({
+    slug,
+    title,
+    image,
+    price,
+    weight,
+    quantity,
+    createdAt: new Date(),
+  });
 
   return NextResponse.json({ success: true, id: result.insertedId });
 }
