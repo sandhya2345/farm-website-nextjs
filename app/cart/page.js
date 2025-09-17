@@ -182,6 +182,7 @@ const Cart = () => {
 
 
         </div>
+            <h1>Order Now</h1>
 
 
       </div>
