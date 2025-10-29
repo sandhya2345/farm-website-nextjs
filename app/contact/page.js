@@ -89,7 +89,7 @@ const Contact = () => {
                 <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 '>
                   <label className="cursor-pointer p-3 mt-2 rounded-xl border transition-all text-center border-red-600 bg-red-50 text-red-700">
                     <MessageSquare className='mx-auto h-5 w-5' />
-                    <span>General</span>
+                    <span>Generals</span>
                   </label>
                   <label className="cursor-pointer p-3 mt-2 rounded-xl border transition-all text-center border-gray-200  text-gray-600">
                     <ShoppingCart className='mx-auto h-5 w-5' />
