@@ -194,7 +194,7 @@ export default function Home() {
 
           <div className="text-center">
             <div className="w-32 h-32 mx-auto flex bg-green-50 rounded-2xl p-6 group-hover:bg-green-100 transition-all duration-300">
-              <Image
+              <img
                 alt="100% Wax Free"
                 loading="lazy"
                 width="128"
