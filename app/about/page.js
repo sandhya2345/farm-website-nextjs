@@ -15,7 +15,7 @@ const About = () => {
                             <span className='text-red-600'>to Apple Farming</span>
                          </h1>
                          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto px-4 sm:px-0">
-                            We're young visioners who also grow apples in the beautiful mountains of Mustang. 
+                            We&apos;re young visioners who also grow apples in the beautiful mountains of Mustang. 
                             Through our videos and farming, we share our journey while bringing fresh,
                              quality fruit from our orchards to your home.
                          </p>

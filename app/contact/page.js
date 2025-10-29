@@ -13,7 +13,7 @@ const Contact = () => {
             <span className="text-sm font-medium">Contact Us</span>
           </div>
           <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4'>How Can We Help?</h1>
-          <p className='text-xl text-gray-600 mb-8'>Questions about our apples? Need bulk orders? We're here to help.</p>
+          <p className='text-xl text-gray-600 mb-8'>Questions about our apples? Need bulk orders? We&apos;re here to help.</p>
 
           <div className='flex flex-wrap items-center justify-center text-sm text-gray-600 gap-6'>
             <div className='flex items-center gap-2'>
@@ -81,11 +81,11 @@ const Contact = () => {
           <div className='bg-white rounded-3xl shadow p-6 sm:p-8'>
             <div className='text-center mb-8'>
               <h1 className='text-2xl sm:text-3xl font-bold text-gray-900 mb-2'>Send a Message</h1>
-              <p className='text-gray-600 text-meduim'>We'll get back to you within 24 hours</p>
+              <p className='text-gray-600 text-meduim'>We&apos;ll get back to you within 24 hours</p>
             </div>
             <form className='space-y-6'>
               <div>
-                <label className=''>What's this about?</label>
+                <label className=''>What&apos;s this about?</label>
                 <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 '>
                   <label className="cursor-pointer p-3 mt-2 rounded-xl border transition-all text-center border-red-600 bg-red-50 text-red-700">
                     <MessageSquare className='mx-auto h-5 w-5' />
@@ -164,7 +164,7 @@ const Contact = () => {
                 <p className='text-gray-600'>Yes, special rates for 50kg+ orders. Contact our sales team for quotes.</p>
               </div>
                <div className='bg-gray-50 hover:bg-gray-100 rounded-xl p-6'>
-                <h3 className='font-semibold text-gray-800'>What's your return policy?</h3>
+                <h3 className='font-semibold text-gray-800'>What&apos;s your return policy?</h3>
                 <p className='text-gray-600'>100% satisfaction guarantee. Contact us within 48 hours if not satisfied.</p>
               </div>
 

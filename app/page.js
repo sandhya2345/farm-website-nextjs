@@ -5,10 +5,11 @@ import { Leaf, ArrowDown, FacebookIcon, YoutubeIcon, X, Twitter } from "lucide-r
 import Link from "next/link";
 import { Instagram, Facebook, Youtube, Mail, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 
 export default function Home() {
-  
+
   return (
 
     <main className="w-full">
@@ -76,94 +77,98 @@ export default function Home() {
 
             {/* card 1 */}
 
-         <Link href={`/varieties/royal-delicious`}>
-            <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
-              <div className="relative">
-                <img
-                  src="/images/Royal.jpg"
-                  alt="Royal Delicious Apples"
-                  className="w-full h-72 object-cover"
+            <Link href={`/varieties/royal-delicious`}>
+              <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
+                <div className="relative">
+                  <Image
+                    src="/images/Royal.jpg"
+                    alt="Royal Delicious Apples"
+                    width={1000}
+                    height={288}
+                    className="w-full h-72 object-cover"
                   />
-                <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                  Premium
-                </span>
-              </div>
-
-              <div className="p-6 text-left">
-                <h3 className="text-xl font-bold text-gray-900">
-                  Royal Delicious Apples
-                </h3>
-                <p className="text-gray-600 mt-2 text-sm">
-                  Premium red variety with exceptional sweetness and vibrant color.
-                  Perfect balance of crisp texture and royal quality, making them
-                  our customer favorite.
-                </p>
-
-                <div className="mt-4 flex items-center gap-2">
-                  <span className="text-2xl font-bold text-gray-900">₹1499</span>
-                  <span className="line-through text-gray-400">₹1599</span>
-                  <span className="ml-auto bg-green-100 text-green-700 px-2 py-1 text-xs rounded">
-                    Save ₹99
+                  <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Premium
                   </span>
                 </div>
 
-                <button className="mt-4 w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
-                  <span>Add to Cart</span>
-                </button>
+                <div className="p-6 text-left">
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Royal Delicious Apples
+                  </h3>
+                  <p className="text-gray-600 mt-2 text-sm">
+                    Premium red variety with exceptional sweetness and vibrant color.
+                    Perfect balance of crisp texture and royal quality, making them
+                    our customer favorite.
+                  </p>
+
+                  <div className="mt-4 flex items-center gap-2">
+                    <span className="text-2xl font-bold text-gray-900">₹1499</span>
+                    <span className="line-through text-gray-400">₹1599</span>
+                    <span className="ml-auto bg-green-100 text-green-700 px-2 py-1 text-xs rounded">
+                      Save ₹99
+                    </span>
+                  </div>
+
+                  <button className="mt-4 w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
               </div>
-            </div>
-          </Link>
-           
+            </Link>
+
 
             {/* card 2 */}
 
-           <Link href={`/varieties/royal-delicious`}>
-            <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
-              <div className="relative">
-                <img
-                  src="/images/mix.jpg"
-                  alt="Royal Delicious Apples"
-                  className="w-full h-72 object-cover"
-                />
-                <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                  Best Value
-                </span>
-              </div>
-
-              <div className="p-6 text-left">
-                <h3 className="text-xl font-bold text-gray-900">
-                  Royal Delicious Apples
-                </h3>
-                <p className="text-gray-600 mt-2 text-sm">
-                  Premium red variety with exceptional sweetness and vibrant color.
-                  Perfect balance of crisp texture and royal quality, making them
-                  our customer favorite.
-                </p>
-
-                <div className="mt-4 flex items-center gap-2">
-                  <span className="text-2xl font-bold text-gray-900">₹1499</span>
-                  <span className="line-through text-gray-400">₹1599</span>
-                  <span className="ml-auto bg-green-100 text-green-700 px-2 py-1 text-xs rounded">
-                    Save ₹99
+            <Link href={`/varieties/royal-delicious`}>
+              <div className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-3 hover:scale-[1.02] flex flex-col h-full">
+                <div className="relative">
+                  <Image
+                    src="/images/mix.jpg"
+                    alt="Royal Delicious Apples"
+                    width={1000}  
+                    height={288}  
+                    className="w-full h-72 object-cover"
+                  />
+                  <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Best Value
                   </span>
                 </div>
 
-                <button className="mt-4 w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
-                  <span>Add to Cart</span>
-                </button>
+                <div className="p-6 text-left">
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Royal Delicious Apples
+                  </h3>
+                  <p className="text-gray-600 mt-2 text-sm">
+                    Premium red variety with exceptional sweetness and vibrant color.
+                    Perfect balance of crisp texture and royal quality, making them
+                    our customer favorite.
+                  </p>
+
+                  <div className="mt-4 flex items-center gap-2">
+                    <span className="text-2xl font-bold text-gray-900">₹1499</span>
+                    <span className="line-through text-gray-400">₹1599</span>
+                    <span className="ml-auto bg-green-100 text-green-700 px-2 py-1 text-xs rounded">
+                      Save ₹99
+                    </span>
+                  </div>
+
+                  <button className="mt-4 w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
               </div>
-            </div>
-           </Link>
+            </Link>
           </div>
 
-          
-            <Link href="/varieties">
-          <div className="max-w-xl mt-12 mx-auto flex items-center justify-center">
-            <button className="mt-4 w-1/2  bg-gray-900 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              <span>View all Apple Varieties</span>
-            </button>
-          </div>
-            </Link>
+
+          <Link href="/varieties">
+            <div className="max-w-xl mt-12 mx-auto flex items-center justify-center">
+              <button className="mt-4 w-1/2  bg-gray-900 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <span>View all Apple Varieties</span>
+              </button>
+            </div>
+          </Link>
         </div>
       </section>
 
@@ -189,7 +194,7 @@ export default function Home() {
 
           <div className="text-center">
             <div className="w-32 h-32 mx-auto flex bg-green-50 rounded-2xl p-6 group-hover:bg-green-100 transition-all duration-300">
-              <img
+              <Image
                 alt="100% Wax Free"
                 loading="lazy"
                 width="128"
@@ -314,64 +319,64 @@ export default function Home() {
 
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             <Link
-            href="https://instagram.com"
-            target="_blank"
-            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
-          >
-             <Instagram className="w-10 h-10 text-gray-800 mb-3" />
-            <h3 className="font-semibold">Instagram</h3>
-            <p className="text-sm text-gray-500">@ambertalefarms</p>
-            <span className="text-gray-500 text-sm mt-2">Follow↗</span>
+              href="https://instagram.com"
+              target="_blank"
+              className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
+            >
+              <Instagram className="w-10 h-10 text-gray-800 mb-3" />
+              <h3 className="font-semibold">Instagram</h3>
+              <p className="text-sm text-gray-500">@ambertalefarms</p>
+              <span className="text-gray-500 text-sm mt-2">Follow↗</span>
 
-          </Link>
+            </Link>
 
-          <Link
-            href="https://instagram.com"
-            target="_blank"
-            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
-          >
-             <Twitter className="w-10 h-10 text-gray-800 mb-3" />
-            <h3 className="font-semibold">Instagram</h3>
-            <p className="text-sm text-gray-500">@appletales</p>
-            <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
+            <Link
+              href="https://instagram.com"
+              target="_blank"
+              className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
+            >
+              <Twitter className="w-10 h-10 text-gray-800 mb-3" />
+              <h3 className="font-semibold">Instagram</h3>
+              <p className="text-sm text-gray-500">@appletales</p>
+              <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
 
-          </Link>
+            </Link>
 
-           <Link
-            href="https://instagram.com"
-            target="_blank"
-            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
-          >
-             <FacebookIcon className="w-10 h-10 text-gray-800 mb-3" />
-            <h3 className="font-semibold">Facebook</h3>
-            <p className="text-sm text-gray-500">@appletales</p>
-            <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
+            <Link
+              href="https://instagram.com"
+              target="_blank"
+              className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
+            >
+              <FacebookIcon className="w-10 h-10 text-gray-800 mb-3" />
+              <h3 className="font-semibold">Facebook</h3>
+              <p className="text-sm text-gray-500">@appletales</p>
+              <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
 
-          </Link>
+            </Link>
 
-          <Link
-            href="https://instagram.com"
-            target="_blank"
-            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
-          >
-             <YoutubeIcon className="w-10 h-10 text-gray-800 mb-3" />
-            <h3 className="font-semibold">YouTube</h3>
-            <p className="text-sm text-gray-500">@appletales</p>
-            <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
+            <Link
+              href="https://instagram.com"
+              target="_blank"
+              className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
+            >
+              <YoutubeIcon className="w-10 h-10 text-gray-800 mb-3" />
+              <h3 className="font-semibold">YouTube</h3>
+              <p className="text-sm text-gray-500">@appletales</p>
+              <span className="text-gray-500 text-sm mt-2">Follow ↗</span>
 
-          </Link>
+            </Link>
 
-          <Link
-            href="https://instagram.com"
-            target="_blank"
-            className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
-          >
-             <Mail className="w-10 h-10 text-gray-800 mb-3" />
-            <h3 className="font-semibold">E-Mail</h3>
-            <p className="text-sm text-gray-500">@appletales</p>
-            <span className="text-gray-500 mt-2">Follow ↗</span>
+            <Link
+              href="https://instagram.com"
+              target="_blank"
+              className="flex flex-col items-center justify-center px-6 py-10 border border-green-200 rounded-xl hover:shadow-lg transition"
+            >
+              <Mail className="w-10 h-10 text-gray-800 mb-3" />
+              <h3 className="font-semibold">E-Mail</h3>
+              <p className="text-sm text-gray-500">@appletales</p>
+              <span className="text-gray-500 mt-2">Follow ↗</span>
 
-          </Link>
+            </Link>
 
           </div>
 
