@@ -186,7 +186,7 @@ export default function Home() {
           </h2>
           <p className="mt-8 text-gray-600 max-w-3xl mx-auto text-xl">
             Every apple reflects our commitment to purity, tradition, and excellence.
-            Discover what makes our apples extraordinary.
+            Discover what makes our apples extraordinary..
           </p>
         </div>
 
